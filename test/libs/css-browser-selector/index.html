@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CSS Browser Selector + | Um Auxiliador no Desenvovimento Responsivo Cross-Browser</title>
+    <meta name="description"
+          content="CSS Browser Selector + é um javascript muito pequeno, que habilita seletores CSS. Um Auxiliador no Desenvolvimento Responsivo Cross-Browser">
+    <meta name="viewport"
+          content="initial-scale=1.0, width=device-width, minimum-scale=1.0, user-scalable=no">
+
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> <!--(original)-->
+
+    <!-- Veja mais em: http://bootswatch.com/ -->
+    <!-- <link rel="stylesheet" href="http://bootswatch.com/amelia/bootstrap.min.css"> <!--(skin)-->
+    <!-- <link rel="stylesheet" href="http://bootswatch.com/cerulean/bootstrap.min.css"> <!--(skin)-->
+    <!-- -->
+    <link rel="stylesheet" href="http://bootswatch.com/cyborg/bootstrap.min.css">
+    <!--(skin)-->
+    <!-- <link rel="stylesheet" href="http://bootswatch.com/journal/bootstrap.min.css"> <!--(skin)-->
+    <!-- <link rel="stylesheet" href="http://bootswatch.com/readable/bootstrap.min.css"> <!--(skin)-->
+    <!-- <link rel="stylesheet" href="http://bootswatch.com/simplex/bootstrap.min.css"> <!--(skin)-->
+    <!-- <link rel="stylesheet" href="http://bootswatch.com/slate/bootstrap.min.css"> <!--(skin)-->
+    <!-- <link rel="stylesheet" href="http://bootswatch.com/spacelab/bootstrap.min.css"> <!--(skin)-->
+    <!-- <link rel="stylesheet" href="http://bootswatch.com/spruce/bootstrap.min.css"> <!--(skin)-->
+    <!-- <link rel="stylesheet" href="http://bootswatch.com/superhero/bootstrap.min.css"> <!--(skin)-->
+    <!-- <link rel="stylesheet" href="http://bootswatch.com/united/bootstrap.min.css"> <!--(skin)-->
+
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="css/bootstrap-responsive_lt-ie9.css">
+    <![endif]-->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+
+    <script>
+        //var css_browser_selector_ns = "ns-";
+    </script>
+    <script src="js/vendor/css_browser_selector.js"></script>
+    <!--<script src="js/vendor/css_browser_selector.min.js"></script>-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.1.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<!--[if lt IE 7]>
+<div class="container">
+    <div class="hero-unit chromeframe">
+        <p>
+            Você está usando um navegador desatualizado!
+        </p>
+
+        <p>
+            <a href="http://browsehappy.com/">Atualize seu navegador hoje</a>
+            &nbsp;ou&nbsp;
+            <a href="http://www.google.com/chromeframe/?redirect=true">instalação do Google Chrome Frame</a>
+            &nbsp;para melhor experimentar este site.
+        </p>
+    </div>
+</div>
+<![endif]-->
+
+<header class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="#">CSS Browser Selector +</a>
+        </div>
+    </div>
+</header>
+
+<article class="container">
+
+    <!-- Main hero unit for a primary marketing message or call to action -->
+    <div class="hero-unit" id="Home">
+        <h1>CSS Browser Selector +</h1>
+        
+        <style>
+            .test {
+                display: none;
+            }
+            .hidpi .ret { display: block!important; }
+            .retina_1x .ret_1x { display: block!important; }
+            .retina_2x .ret_2x { display: block!important; }
+        </style>
+        
+        <p>
+        <span class="test ret">
+            Hi-dpi screen
+        </span>
+        <span class="test ret_1x">
+            Pixel-ratio > 1 and < 2
+        </span>
+        <span class="test ret_2x">
+            Pixel-ratio >= 2
+        </span>
+        </p>
+
+        <h2 lang="pt-br">
+            <strong lang="pt-br">Um Auxiliador no Desenvolvimento Responsivo Cross-Browser</strong><br/>
+            <em lang="en">A Cross-browser Responsive Design Helper</em>
+        </h2>
+
+        <p>
+            <strong lang="pt-br">CSS Browser Selector + é um javascript muito pequeno, que habilita seletores
+                CSS.</strong><br/>
+            <em lang="en">CSS Browser Selector + is a very small javascript which empowers CSS selectors.</em>
+        </p>
+
+        <h4>
+            <strong lang="pt-br">Veja o exemplo:</strong><br/>
+            <em lang="en">See an example:</em>
+        </h4>
+<pre>
+&lt;html lang="pt-br" class="webkit chrome chrome21 win win8 js orientation_landscape minw_980 maxw_1199"&gt;
+</pre>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <p>
+                        <a href="https://github.com/ridjohansen/css_browser_selector/zipball/master"
+                           class="btn btn-block btn-large btn-success">
+                            CSS Browser Selector Download
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="https://github.com/ridjohansen/css_browser_selector/"
+                           class="btn btn-block btn-large btn-warning">
+                            Github
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <ul class="unstyled">
+
+                    <li class="span6">
+                        <a href="index_pt.html" class="btn btn-block btn-large btn-primary" lang="pt-br">Português</a>
+                    </li>
+                    <li class="span6">
+                        <a href="index_en.html" class="btn btn-block btn-large btn-primary" lang="en">English</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <p>
+            CSS Browser Selector + é um auxiliador no desenvolvimento responsivo cross-browser sem a
+            utilização de Hacks. Com ele é possível desenvolver sites responsivos para navegadores que
+            não suportam o módulo Media Queries (CSS3) e sem a utilização de hacks (caracteres não
+            validados pelo W3C).
+        </p>
+
+        <p>
+            O script adiciona classes que fazem uma verificação profunda no navegador do cliente, abrindo
+            um leque de oportunidades de personalização, podendo assim, estender estas funcionalidades
+            até para navegadores mais recentes.
+        </p>
+
+        <p>
+            Como são utilizadas classes de css, o desenvolvimento torna-se amigável;
+        </p>
+
+        <p>
+        Vantagens:
+
+        - Fácil de ser Implementado
+
+        - Habilidade de escrever códigos CSS específicos
+
+        - Possibilidade de resolver problemas em versões em outros SOs
+
+        - Herança de CSS devido à classe que identifica a família do Navegador
+
+        - Fim dos CSS Hacks!
+        </p>
+
+        <p>
+        Ele identifica:
+
+        - Navegadores: Firefox; IE; Opera; Safari; Chrome, Konqueror, Iron
+
+        - Versões dos navegadores: (ie6, ie7, ie8, ie9)
+
+        - Motores de renderização: Webkit; Mozilla; Gecko
+
+        - Sistemas Operacionais/Plataformas: Mac; Win: Win8, Win7, Vista, WinXP, Win2k, WinNT;
+        FreeBSD; Linux/x11
+
+        - Dispositivos: Ipod; Ipad; Iphone; WebTV; Blackberry; Android; J2me; RIM Playbook; mobile
+        (generico)
+
+        - Tecnologia habilitada: JS (usado em conjunto com &lt;html class="no-js"&gt; para ainda ter mais
+        controle)
+
+        - Detecção de max-width e min-width
+
+        - Detecção da orientação navegador
+
+        - Detecção de idioma
+        </p>
+        <p>
+            <strong>Mais Informações:</strong>
+            <br/>(http://rafael.adm.br/css_browser_selector)
+        </p>
+
+        <p>
+            <strong>Versões Experimentais:</strong>
+            <br/>(http://github.com/ridjohansen/css_browser_selector/)
+            <br/>(http://github.com/verbatim/css_browser_selector/)
+        </p>
+    </div>
+
+    <p>http://creativecommons.org/licenses/by/2.5/</p>
+
+    <h4>Autor original:</h4>
+
+    <p>
+        <strong>Rafael Lima:</strong>
+        http://rafael.adm.br
+    </p>
+
+    <h4>Com base na idéia do site 37signals</h4>
+
+    <p>http://37signals.com/svn/archives2/browser_selectors_in_css.php</p>
+
+</article>
+<!-- /container -->
+
+<hr class="container">
+
+<footer class="container">
+    <p>
+        Richard Duchatsch Johansen (ridjohansen)
+        | <a href="http://twitter.com/ridjohansen">Twitter</a>
+        | <a href="http://facebook.com/ridjohansen">Facebook</a>
+        | <a href="http://linkedin.com/in/ridjohansen">LinkedIn</a>
+        | <a href="http://slideshare.net/ridjohansen">Slideshare</a>
+        | <a href="http://klout.com/ridjohansen">Klout</a>
+    </p>
+</footer>
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-34735780-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "css-browser-selector",
+  "version": "0.0.0",
+  "commit": "30010bf367332416c058144d11265ba949953762",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ridjohansen/css_browser_selector.git"
+  }
+}
