@@ -2,16 +2,21 @@
 // Flexbox LESS mixins
 // The spec: http://www.w3.org/TR/css3-flexbox
 // --------------------------------------------------
- 
-// Flexbox display
-// flex or inline-flex
-.flex-display(@display: flex) {
-	display: ~"-webkit-@{display}";
-	display: ~"-moz-@{display}";
-	display: ~"-ms-@{display}box"; // IE10 uses -ms-flexbox
-	display: ~"-ms-@{display}"; // IE11
-	display: @display;
+
+#flex{
+	// Flexbox display
+	// flex or inline-flex
+	.display(@display: flex) {
+		display: ~"-webkit-@{display}";
+		display: ~"-moz-@{display}";
+		display: ~"-ms-@{display}box"; // IE10 uses -ms-flexbox
+		display: ~"-ms-@{display}"; // IE11
+		display: @display;
+	}
+	
+	
 }
+
  
 // The 'flex' shorthand
 // - applies to: flex items
