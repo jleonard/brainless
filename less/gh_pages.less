@@ -1,0 +1,55 @@
+@import "normalize.less";
+
+@import "mixins/css3.less";
+@import "mixins/position.less";
+@import "mixins/util.less";
+
+*,
+*:before,
+*:after {
+  #css3 > .box-sizing(border-box);
+}
+
+html{
+	font-size: 62.5%;
+}
+
+body{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,p{}
+
+.inner,section{
+	width: 80%;
+	margin: 0px auto;
+}
+
+header{
+	position: relative;
+	background: #f06;
+	background : linear-gradient( 45deg, #f06, orange );
+	color: #fff;
+	h1{
+		line-height: 400px;
+	}
+}
+
+.example{
+	#util > .clearfix();
+	pre{
+		width: 50%;
+		float: left;
+		margin: 0px;
+		padding: 20px;
+		background-color: #d6d6d6;
+		&:after{
+			content: '\25b8';
+			color: #d6d6d6;
+		}
+	}
+	.content{
+		width: 50%;
+		float: left;
+	}
+}

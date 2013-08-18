@@ -6,12 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="Brainless : A collection of less utilities." />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/gh_pages.css">
 
     <title>Brainless</title>
+
   </head>
 
   <body>
+
+    <header>
+      <div class="inner">
+        <a id="forkme_banner" href="https://github.com/jleonard/brainless">View on GitHub</a>
+        <h1>Brainless <span>A collection of less utilities</span></h1>
+      </div>
+    </header>
+
+    <section>
+      <h2>Position</h2>
+      <pre><code>
+        .foo{
+          position: absolute;
+          top: 20px;
+          left: 40px;
+        }
+      </code></pre>
+      <pre><code>
+        .foo{
+          #absolute > .top-left(20px,40px);
+        }
+      </code></pre>
+      <div class="example">
+        <pre><code>
+        .foo{
+          #absolute > .top-left(20px,40px);
+        }
+        </code></pre>
+        <div class="content">
+          I am the working example.
+        </div>
+      </div>
+    </section>
 
     <!-- HEADER -->
     <div id="header_wrap" class="outer">

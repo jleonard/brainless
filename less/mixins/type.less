@@ -1,0 +1,64 @@
+//
+// conveniences to cut through font-style, font-variant, text-decoration etc. when styling type
+//
+
+#type{
+
+  // mixins
+  // --------------------------
+  .calculate-line-height(@font-size:14px,@line-height-ratio:1.428571429){
+    line-height: floor(@font-size-base * @line-height-base);
+  }
+
+  // conveniences
+  // cut through font-style, font-variant, text-decoration etc.
+  // --------------------------
+  .light(){
+    font-weight: 400;
+  }
+  
+  .bold(){
+  	font-weight	:	bold;
+  }
+
+  .italic(){
+    font-style  : italic;
+  }
+  
+  .kearning( @num: normal ){
+  	letter-spacing:	@num;
+  }
+
+  .leading( @num: normal ){
+  	line-height:	@num;
+  }
+  
+  .smallcaps(){
+  	font-variant	:	small-caps;
+  }
+
+  .overline(){
+    text-decoration : overline;
+  }
+
+  .line-through(){
+    text-decoration: line-through;
+  }
+
+  .strikethrough(){
+    .line-through();
+  }
+  
+  .underline(){
+  	text-decoration	:	underline;
+  }
+  
+  .uppercase(){
+  	text-transform	:	uppercase;
+  }
+
+  .lowercase(){
+    text-transform  : lowercase;
+  }
+  
+}

@@ -1,0 +1,79 @@
+#util{
+
+  .compute-line-height(@font-size:14px,@line-height-ratio:1.428571429){
+    line-height: floor(@font-size-base * @line-height-ratio);
+  }
+
+	// hardware acceleration
+	.hardware-acceleration(){
+    -webkit-transform: translateZ(0);
+  }
+
+	// clearfix
+	.clearfix() {
+  	&:before,
+  	&:after {
+    	content: " "; /* 1 */
+    	display: table; /* 2 */
+  	}
+  	&:after {
+    	clear: both;
+  	}
+	}
+
+  .hbox(@margin:20px){
+    list-style-type:none;
+    .clearfix();
+    li{
+      float:left;
+      margin-right:@margin;
+      &:last-child,&.last{
+        margin-right:0px;
+      }
+    }
+  }
+
+	// image replacement
+	// source https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
+	.hide-text() {
+  	font: 0/0 a;
+  	color: transparent;
+  	text-shadow: none;
+  	background-color: transparent;
+  	border: 0;
+	}
+
+  .ir(){
+    .hide-text();
+  }
+
+	// positioning
+	.center-block() {
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	}
+
+	.offscreen(){
+  	position: absolute;
+  	left: -9999px;
+  }
+
+	// sizing
+	.size(@width:100px, @height:100px) {
+  	width: @width;
+  	height: @height;
+	}
+	.square(@size:100px) {
+  	.size(@size, @size);
+	}
+
+	// Placeholder text
+	.placeholder(@color: #ccc) {
+  	&:-moz-placeholder            { color: @color; } // Firefox 4-18
+  	&::-moz-placeholder           { color: @color; } // Firefox 19+
+  	&:-ms-input-placeholder       { color: @color; } // Internet Explorer 10+
+  	&::-webkit-input-placeholder  { color: @color; } // Safari and Chrome
+	}
+
+}
