@@ -234,7 +234,7 @@ module.exports = function(grunt) {
     },
     
     watch: { // !
-      files: ['../less/**','../*.html',"../docs/src/documents/**","../docs/src/layout/**","../docs/src/partials/**"],
+      files: ['../less/**','../*.html',"../javascripts/**","../docs/src/layout/**","../docs/src/partials/**"],
       tasks: ['default'],
       options: {
         livereload: false

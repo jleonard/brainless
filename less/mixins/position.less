@@ -13,8 +13,13 @@
 		.pos();
 		top:	@x;
 	}
-	.x-y( @x: 0px, @y: 0px ){
-		.top-left( @y, @x );
+	.top( @y: 0px ){
+		.pos();
+		top: @y;
+	}
+	.left( @x: 0px ){
+		.pos();
+		left:	@x;
 	}
 	.bottom-left( @y:0px,@x:0px ){
 		.pos();
@@ -49,6 +54,14 @@
 		.pos();
 		top:	@x;
 	}
+	.top( @y: 0px ){
+		.pos();
+		top: @y;
+	}
+	.left( @x: 0px ){
+		.pos();
+		left:	@x;
+	}
 	.bottom-left( @y:0px,@x:0px ){
 		.pos();
 		bottom: @y;
@@ -80,7 +93,15 @@
 	}
 	.y( @y: 0px ){
 		.pos();
-		top: @x;
+		top: @y;
+	}
+	.top( @y: 0px ){
+		.pos();
+		top: @y;
+	}
+	.left( @x: 0px ){
+		.pos();
+		left:	@x;
 	}
 	.bottom-left( @y:0px,@x:0px ){
 		.pos();
@@ -105,10 +126,10 @@
 }
 #sticky{
   .pos(){
-  	position: -webkit-sticky;
-  	position: -moz-sticky;
-  	position: -ms-sticky;
-  	position: -o-sticky;
+  		position: -webkit-sticky;
+  		position: -moz-sticky;
+  		position: -ms-sticky;
+  		position: -o-sticky;
 		position: sticky;
 	}
 	.x( @x: 0px ){
@@ -117,14 +138,34 @@
 	}
 	.y( @y: 0px ){
 		.pos();
-		top:	@x;
+		top:	@y;
 	}
 	.top( @y: 0px ){
 		.pos();
-		top:	@x;
+		top:	@y;
 	}
-	.left( @y: 0px ){
+	.left( @x: 0px ){
 		.pos();
 		left:	@x;
+	}
+	.bottom-left( @y:0px,@x:0px ){
+		.pos();
+		bottom: @y;
+		left: @x;
+	}
+	.bottom-right( @y:0px, @x:0px ){
+		.pos();
+		bottom: @y;
+		right: @x;
+	}
+	.top-left( @y:0px, @x:0px ){
+		.pos();
+		top: @y;
+		left: @x;
+	}
+	.top-right( @y:0px, @x:0px ){
+		.pos();
+		top: @y;
+		right: @x;
 	}
 }

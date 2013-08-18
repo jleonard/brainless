@@ -8,6 +8,8 @@
 @serif: 'Bitter', Georgia, serif;
 @sans : "Helvetica Neue",Helvetica,Arial,sans-serif;
 
+@blueprint: #0EBFE9;
+
 *,
 *:before,
 *:after {
@@ -23,10 +25,39 @@ body{
 	font-size: 1.5em;
 }
 
-h1,h2,h3,h4,h5,h6,p{}
+h1,h2,h3,h4,h5,h6,p{
+	code{
+		color: #222;
+	}
+}
 
 h1,h2{
 	font-family: @serif;
+}
+
+h2{
+	font-size: 3em;
+}
+
+h5{
+	font-size: 1.2em;
+	color: #666;
+	margin: 1em 0px;
+}
+
+h6{
+	font-size: 1.5em;
+	color: #666;
+	margin: 1em 0px;
+	
+}
+
+pre{
+	background: linear-gradient( 45deg, #222, #333 );
+}
+
+pre code{
+	background: none;
 }
 
 .inner,section{
@@ -55,39 +86,99 @@ header{
 		}
 	}
 	.major-actions{
-		margin-top: 30px;
+		margin-top: 50px;
 		a{
 			float: left;
 			margin-right: 0.5em;
 			display: block;
 			padding: 10px;
 			border: 1px solid #fff;
+			background-color: #fff;
 			text-decoration: none;
-			color: #fff;
+			color: #3B5323;
 			font-weight: bold;
 			font-size: 1.2em;
+			&:hover{
+				//background-color: #3B5323;
+				color: #AADD00;
+			}
 		}
 	}
 }
 
 .example{
 	#util > .clearfix();
+	border-top: 1px solid #d6d6d6;
+	border-bottom: 1px solid #d6d6d6;
+	position: relative;
+	&:before{
+		display: block;
+		#absolute > .top-left();
+		content: "Example";
+		background: #000;
+		font-size: 11px;
+		padding: 3px 8px;
+		color: #fff;
+		font-weight: bold;
+		z-index: 500;
+	}
 	pre{
 		position: relative;
 		width: 50%;
 		float: left;
 		margin: 0px;
 		padding: 20px;
-		background-color: #f5f5f5;
 		&:after{
 			font-size: 36px;
-			#absolute > .top-right(20%,-5px);
+			#absolute > .top-right(30%,-12px);
 			content: '\25b8';
-			color: #f5f5f5;
+			color: #333;
 		}
 	}
 	.content{
 		width: 50%;
 		float: left;
+		position: relative;
+	}
+}
+
+.note{
+	padding: 10px;
+	border: 1px solid @blueprint;
+	background: #F0FFFF;
+}
+
+.demo.box{
+	#util > .square(50px);
+	border: 2px solid @blueprint;
+	padding: 8px;
+	color: @blueprint;
+	font-size: 1.2em;
+}
+
+/*
+* Specific demos
+*/
+// position
+.demo{
+	&.position{
+		&.top-left{
+			#absolute > .top-left(20px,40px);
+		}
+		&.top-right{
+			#absolute > .top-right(20px,40px);
+		}
+		&.bottom-left{
+			#absolute > .bottom-left(20px,40px);
+		}
+		&.bottom-right{
+			#absolute > .bottom-right(20px,40px);
+		}
+		&.y{
+			#relative > .top(20px);
+		}
+		&.x{
+			#relative > .left(20px);
+		}
 	}
 }
