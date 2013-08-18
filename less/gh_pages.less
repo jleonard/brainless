@@ -3,6 +3,10 @@
 @import "mixins/css3.less";
 @import "mixins/position.less";
 @import "mixins/util.less";
+//@import "github-btn.less";
+
+@serif: 'Bitter', Georgia, serif;
+@sans : "Helvetica Neue",Helvetica,Arial,sans-serif;
 
 *,
 *:before,
@@ -15,10 +19,15 @@ html{
 }
 
 body{
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: @sans;
+	font-size: 1.5em;
 }
 
 h1,h2,h3,h4,h5,h6,p{}
+
+h1,h2{
+	font-family: @serif;
+}
 
 .inner,section{
 	width: 80%;
@@ -28,24 +37,53 @@ h1,h2,h3,h4,h5,h6,p{}
 header{
 	position: relative;
 	background: #f06;
-	background : linear-gradient( 45deg, #f06, orange );
+	background: linear-gradient( 45deg, #AADD00, #3B5323 );
 	color: #fff;
+	padding: 260px 0px 260px 0px;
+	.actions{
+		#absolute > .top-right(10px,10px);
+	}
 	h1{
-		line-height: 400px;
+		margin: 0px;
+		font-size: 5em;
+		font-weight: normal;
+		span{
+			display: block;
+			font-size: 0.25em;
+			font-weight: normal;
+			//font-family: @sans;
+		}
+	}
+	.major-actions{
+		margin-top: 30px;
+		a{
+			float: left;
+			margin-right: 0.5em;
+			display: block;
+			padding: 10px;
+			border: 1px solid #fff;
+			text-decoration: none;
+			color: #fff;
+			font-weight: bold;
+			font-size: 1.2em;
+		}
 	}
 }
 
 .example{
 	#util > .clearfix();
 	pre{
+		position: relative;
 		width: 50%;
 		float: left;
 		margin: 0px;
 		padding: 20px;
-		background-color: #d6d6d6;
+		background-color: #f5f5f5;
 		&:after{
+			font-size: 36px;
+			#absolute > .top-right(20%,-5px);
 			content: '\25b8';
-			color: #d6d6d6;
+			color: #f5f5f5;
 		}
 	}
 	.content{
