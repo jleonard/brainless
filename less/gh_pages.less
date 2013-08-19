@@ -3,6 +3,9 @@
 @import "mixins/css3.less";
 @import "mixins/position.less";
 @import "mixins/util.less";
+@import "mixins/reset.less";
+@import "mixins/type.less";
+@import "mixins/css3.less";
 //@import "github-btn.less";
 
 @serif: 'Bitter', Georgia, serif;
@@ -39,7 +42,7 @@ h2{
 	font-size: 3em;
 }
 
-h5{
+h3{
 	font-size: 1.2em;
 	color: #666;
 	margin: 1em 0px;
@@ -59,6 +62,34 @@ pre{
 pre code{
 	background: none;
 }
+
+section{
+	#util > .clearfix();
+}
+
+dl{
+	font-size: 1.2em;
+	#util > .clearfix();
+	float: left;
+	padding-left: 20px;
+	width: 25%;
+	dt{
+		margin: 0px 0px 5px 0px;
+		font-weight: bold;
+	}
+	dd{
+		#reset > ._(margin);
+		margin-left: 0px;
+		font-family: monospace;
+		font-weight: bold;
+		color: #666;
+	}
+}
+
+.mono{
+	font-family: monospace;
+}
+
 
 .inner,section{
 	width: 80%;
@@ -106,6 +137,18 @@ header{
 	}
 }
 
+footer{
+	.inner{
+		padding: 40px 0px;
+		color: #fff;
+		a{
+			color: @blueprint;
+			text-decoration: none;
+		}
+	}
+	background: linear-gradient(45deg, #222, #111);
+}
+
 .example{
 	#util > .clearfix();
 	border-top: 1px solid #d6d6d6;
@@ -142,12 +185,6 @@ header{
 	}
 }
 
-.note{
-	padding: 10px;
-	border: 1px solid @blueprint;
-	background: #F0FFFF;
-}
-
 .demo.box{
 	#util > .square(50px);
 	border: 2px solid @blueprint;
@@ -179,6 +216,80 @@ header{
 		}
 		&.x{
 			#relative > .left(20px);
+		}
+	}
+}
+
+// reset
+.demo{
+	&.reset{
+		padding: 20px;
+		text-transform: uppercase;
+		border: 1px solid #0EBFE9;
+		&:hover{
+			#reset > ._(padding);
+      #reset > ._(text-transform);
+      #reset > ._(border);
+		}
+	}
+}
+
+//list-style-type
+.text-demo{
+	color: @blueprint;
+	font-size: 1.5em;
+	&.bold{
+		#type > .bold();
+	}
+	&.light{
+		#type > .light();
+	}
+	&.italic{
+		#type > .italic();
+	}
+	&.oblique{
+		#type > .oblique();
+	}
+	&.uppercase{
+		#type > .uppercase();
+	}
+	&.lowercase{
+		#type > .lowercase();
+	}
+	&.capitalize{
+		#type > .capitalize();
+	}
+	&.smallcaps{
+		#type > .smallcaps();
+	}
+	&.underline{
+		#type > .underline();
+	}
+	&.overline{
+		#type > .overline();
+	}
+}
+
+//css3
+.demo.box{
+	&.css3{
+		&.border-radius-1{
+			#css3 > .border-radius(5px);
+			margin-bottom: 1em;
+		}
+		&.border-radius-2{
+			#css3 > .border-radius(0px,20px);
+			margin-bottom: 1em;
+		}
+		&.border-radius-4{
+			#css3 > .border-radius(5px,10px,0px,40px);
+		}
+		&.transition{
+			#css3 > .transition(background-color, 0.5s, 1s);
+          	background-color: #0EBFE9;
+          	&:hover{
+            	background-color: transparent;
+          	}
 		}
 	}
 }

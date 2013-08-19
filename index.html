@@ -28,7 +28,7 @@
         <div class="major-actions">
           <a class="gh-btn" id="gh-btn" href="https://github.com/jleonard/brainless/" target="_blank"> <span class="gh-ico"></span> <span class="gh-text" id="gh-text">GitHub project</span> 
           </a>
-          <a class="gh-btn" id="gh-btn" href="https://github.com/jleonard/brainless/" target="_blank"> <span class="gh-ico"></span> <span class="gh-text" id="gh-text">Download</span> 
+          <a class="gh-btn" id="gh-btn" href="https://github.com/jleonard/brainless/archive/master.zip" target="_blank"> <span class="gh-ico"></span> <span class="gh-text" id="gh-text">Download</span> 
           </a>
         </div>
         
@@ -43,11 +43,8 @@
 
     <section>
       <h2>Position</h2>
-      <h5>Simple position declarations for <code>absolute</code>, <code>relative</code>, <code>fixed</code> and <code>sticky</code>.</h6>
+      <h3>Simple position declarations for <code>absolute</code>, <code>relative</code>, <code>fixed</code> and <code>sticky</code>.</h3>
 
-      <div class="note">
-        <strong>Note</strong> hi there.
-      </div>
       <!-- x -->
       <h6>.left( @top) <em>or</em> .x( @left )</h6>
       <div class="example">
@@ -185,17 +182,229 @@
         </div>
       </div>
     </section>
+
+
+    <!--
+      TYPE
+    -->
+    <section>
+      <h2>Type</h2>
+      <h3>Shorthands for working with type.</h3>
+      <div class="example">
+        <pre class="less"><code>
+        /* font-weight & font-style */
+        .bold{
+          #type > .bold();
+        }
+
+        .light{
+          #type > .light();
+        }
+
+        .italic{
+          #type > .italic();
+        }
+
+        .oblique{
+          #type > .italic();
+        }
+
+        /* text-transform */
+        .uppercase{
+          #type > .uppercase();
+        }
+
+        .lowercase{
+          #type > .lowercase();
+        }
+
+        .capitalize{
+          #type > .capitalize();
+        }
+
+        .underline{
+          #type > .underline();
+        }
+
+        .overline{
+          #type > .overline();
+        }
+
+        /* font-variant */
+        .smallcaps{
+          #type > .smallcaps();
+        }
+
+        </code></pre>
+        <div class="content" style="padding: 20px;">
+          <p class="text-demo bold" data-lorem="2-5w"></p>
+          <p class="text-demo light" data-lorem="2-5w"></p>
+          <p class="text-demo italic" data-lorem="2-5w"></p>
+          <p class="text-demo oblique" data-lorem="2-5w"></p>
+          <p class="text-demo uppercase" data-lorem="2-5w"></p>
+          <p class="text-demo lowercase" data-lorem="2-5w"></p>
+          <p class="text-demo captialize" data-lorem="2-5w"></p>
+          <p class="text-demo smallcaps" data-lorem="2-5w"></p>
+          <p class="text-demo underline" data-lorem="2-5w"></p>
+          <p class="text-demo overline" data-lorem="2-5w"></p>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      CSS3
+    -->
+    <section>
+      <h2>CSS3</h2>
+      <h3>Reset common .css properties to their default values.</h3>
+
+      <div class="example">
+        <pre class="less"><code>
+        /* .border-radius */
+        .one{
+          #css3 > .border-radius(5px);
+        }
+        .two{
+          #css3 > .border-radius(0px,20px);
+        }
+        .three{
+          #css3 > .border-radius(5px,10px,0px,40px);
+        }
+
+        </code></pre>
+        <div class="content" style="padding: 20px;">
+          <div class="demo box css3 border-radius-1">1</div>
+          <div class="demo box css3 border-radius-2">2</div>
+          <div class="demo box css3 border-radius-4">3</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <pre class="less"><code>
+        /* .less */
+        .foo{
+          #css3 > .transition(background-color, 0.5s, 1s);
+          background-color: #0EBFE9;
+          &:hover{
+            background-color: transparent;
+          }
+        }
+
+        /* .css output */
+        .foo{
+          -webkit-transition: background-color .5s linear;
+          -moz-transition: background-color .5s linear;
+          -ms-transition: background-color .5s linear;
+          -o-transition: background-color .5s linear;
+          transition: background-color .5s linear;
+
+          -webkit-transition-delay: 1s;
+          -moz-transition-delay: 1s;
+          -o-transition-delay: 1s;
+          transition-delay: 1s;
+
+          background-color: #0ebfe9;
+
+        }
+
+        .foo:hover{
+          background-color: transparent;
+        }
+       
+        </code></pre>
+        <div class="content" style="padding: 20px;">
+          <div class="demo box css3 transition">hi</div>
+        </div>
+      </div>
+
+    </section>
+
+    <!--
+      RESET
+    -->
+    <section>
+      <h2>Reset</h2>
+      <h3>Reset common .css properties to their default values.</h3>
+
+      <div class="example">
+        <pre class="less"><code>
+        /* less */
+        .foo{
+          padding: 20px;
+          text-transform: uppercase;
+          border: 1px solid #0EBFE9;
+          &:hover{
+            #reset > ._(padding);
+            #reset > ._(text-transform);
+            #reset > ._(border);
+          }
+        }
+
+        </code></pre>
+        <div class="content" style="padding: 20px;">
+          <div class="demo box reset">hi</div>
+        </div>
+      </div>
+
+      <h6>The <code>#reset > ._(@property)</code> mixin will accept any of the following properties</h6>
+
+      <dl>
+        <dt>Box Model</dt>
+          <dd>border</dd>
+          <dd>box-sizing</dd>
+          <dd>height</dd>
+          <dd>width</dd>
+          <dd>max-height</dd>
+          <dd>max-width</dd>
+          <dd>min-height</dd>
+          <dd>min-width</dd>
+          <dd>margin</dd>
+          <dd>padding</dd>
+      </dl>
+      <dl>
+        <dt>Positioning</dt>
+          <dd>position</dd>
+          <dd>top</dd>
+          <dd>right</dd>
+          <dd>bottom</dd>
+          <dd>left</dd>
+          <dd>clear</dd>
+          <dd>float</dd>
+      </dl>
+      <dl>
+        <dt>Type</dt>
+          <dd>font-style</dd>
+          <dd>font-weight</dd>
+          <dd>font-variant</dd>
+          <dd>letter-spacing</dd>
+          <dd>line-height</dd>
+          <dd>text-transform</dd>
+      </dl>
+      <dl>
+        <dt>Misc</dt>
+          <dd>background-color</dd>
+          <dd>background-image</dd>
+          <dd>box-shadow</dd>
+          <dd>cursor</dd>
+          <dd>overflow</dd>
+          <dd>transform</dd>
+          <dd>z-index</dd>
+      </dl>
+
+      
+
+    </section>
    
     <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
+    <footer>
+      <div class="inner">
         <p class="copyright">Brainless maintained by <a href="https://github.com/jleonard">jleonard</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+      </div>
+    </footer>
 
     <script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="javascripts/hiless.js"></script>
+    <script src="javascripts/lorem.js"></script>
     <script src="javascripts/main.js"></script>
   </body>
 </html>

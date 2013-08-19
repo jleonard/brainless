@@ -2,6 +2,16 @@
   /* code */
   resizeExamples();
   $(window).resize(function(e){ resizeExamples() });
+
+  $(".text-demo").each(function(e){
+  	var list = $(this).attr('class').split(/\s+/);
+  	var len = list.length;
+  	for (var i = 0; i < len; i++) {
+  	    if(list[i] != "text-demo"){
+  	    	$(this).text(list[i] + " "+ $(this).text());
+  	    }
+  	}
+  });
 })(window.jQuery);
 
 function resizeExamples(){

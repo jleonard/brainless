@@ -13,16 +13,16 @@
   // conveniences
   // cut through font-style, font-variant, text-decoration etc.
   // --------------------------
-  .light(){
-    font-weight: 400;
+  .bold(){
+    font-weight : bold;
   }
   
-  .bold(){
-  	font-weight	:	bold;
-  }
-
   .italic(){
     font-style  : italic;
+  }
+
+  .oblique(){
+    font-style: oblique;
   }
   
   .kearning( @num: normal ){
@@ -31,6 +31,10 @@
 
   .leading( @num: normal ){
   	line-height:	@num;
+  }
+
+  .light(){
+    font-weight: 400;
   }
   
   .smallcaps(){
@@ -51,6 +55,10 @@
   
   .underline(){
   	text-decoration	:	underline;
+  }
+
+  .capitalize(){
+    text-transform  : capitalize;
   }
   
   .uppercase(){
