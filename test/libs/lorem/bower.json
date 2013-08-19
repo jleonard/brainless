@@ -1,9 +1,0 @@
-{
-  "name": "lorem",
-  "version": "0.0.0",
-  "commit": "347d93612201d21bee37da44367266223871de02",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jleonard/loremjs.git"
-  }
-}

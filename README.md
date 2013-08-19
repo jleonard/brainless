@@ -1,4 +1,6 @@
 brainless
 =========
 
-I can write what i want.
+######A collection of .less utilities and conveniences.
+
+View the [documentation](http://jleonard.github.io/brainless/).
