@@ -1,0 +1,30 @@
+#transform{
+
+  // hardware acceleration
+  // ---------------------------
+  .hardware-acceleration(){
+    .translateZ(0);
+  }
+
+	.style(@style:preserve-3d){
+		-webkit-transform-style : @style;
+  	-moz-transform-style    : @style;
+  	-o-transform-style      : @style;
+  	-ms-transform-style     : @style;
+  	transform-style         : @style;
+	}
+	.translateZ(@num:200px){
+		-webkit-transform : translateZ(@num);
+  	-moz-transform    : translateZ(@num);
+  	-o-transform      : translateZ(@num);
+  	-ms-transform     : translateZ(@num);
+  	transform         : translateZ(@num);
+	}
+	.YZ(@y:90deg,@z:200px){
+		-webkit-transform : rotateY(@y) translateZ(@z);
+  	-moz-transform    : rotateY(@y) translateZ(@z);
+  	-o-transform      : rotateY(@y) translateZ(@z);
+  	-ms-transform     : rotateY(@y) translateZ(@z);
+  	transform         : rotateY(@y) translateZ(@z);
+	}
+}

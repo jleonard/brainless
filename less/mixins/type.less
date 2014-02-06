@@ -1,18 +1,7 @@
-//
-// conveniences to cut through font-style, font-variant, text-decoration etc. when styling type
-//
-
+// type conveniences
+// --------------------------
 #type{
 
-  // mixins
-  // --------------------------
-  .calculate-line-height(@font-size:14px,@line-height-ratio:1.428571429){
-    line-height: floor(@font-size-base * @line-height-base);
-  }
-
-  // conveniences
-  // cut through font-style, font-variant, text-decoration etc.
-  // --------------------------
   .light(){
     font-weight: 400;
   }
