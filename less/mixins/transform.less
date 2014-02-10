@@ -6,6 +6,14 @@
     .translateZ(0);
   }
 
+  .origin(@x:50%,@y:0,@z:0){
+    -webkit-transform-origin: @x @y @z;
+    -moz-transform-origin: @x @y @z;
+    -o-transform-origin: @x @y @z;
+    -ms-transform-origin: @x @y @z;
+    transform-origin: @x @y @z;
+  }
+
 	.style(@style:preserve-3d){
 		-webkit-transform-style : @style;
   	-moz-transform-style    : @style;
