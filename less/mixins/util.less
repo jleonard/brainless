@@ -13,9 +13,9 @@
     }
   }
 
-  // horizontal layouts. apply this to the children
+  // horizontal layouts. this gets applied to the children
   // -----------------------------------------------
-  .horizontal-box-item(@margin){
+  .horizontal-box-item(@margin:20px){
     float: left;
     margin-left: @margin / 2;
     margin-right: @margin / 2;
@@ -24,6 +24,12 @@
     }
     &:last-child{
       margin-right: 0;
+    }
+  }
+
+  .horizontal-box(@margin:20px){
+    > *{
+      .horizontal-box-item(@margin);
     }
   }
 
