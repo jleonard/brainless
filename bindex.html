@@ -68,113 +68,152 @@
           <div>
             <h2><span>#</span>animation</h2>
             <h4>A convenience for creating @keyframe animations</h4>
-<pre class='less'><code>
-#animation >
-  ._(
-    @keyframes,
-    @time:0.15s,
-    @repeat:infinite,
-    @easing:linear, 
-    @direction: alternate
-  );
-</code></pre>
 
-        </section>
+            <aside class='example'>
+<pre class='major less'><code>#animation > ._(
+  @keyframes,
+  @time:0.15s,
+  @repeat:infinite,
+  @easing:linear, 
+  @direction: alternate
+);</code></pre>
+              <h5>Example</h5>
+              <div class='row'>
+                <pre class="less">
+<code>@-webkit-keyframes wiggle {
+  0% {-webkit-transform:rotate(5deg);}
+  50% {-webkit-transform:rotate(0deg);}
+  100% {-webkit-transform:rotate(-5deg);}
+}
+@-moz-keyframes wiggle {
+  0% {-webkit-transform:rotate(5deg);}
+  50% {-webkit-transform:rotate(0deg);}
+  100% {-webkit-transform:rotate(-5deg);}
+}
+@-o-keyframes wiggle {
+  0% {-webkit-transform:rotate(5deg);}
+  50% {-webkit-transform:rotate(0deg);}
+  100% {-webkit-transform:rotate(-5deg);}
+}
+@keyframes wiggle {
+  0% {-webkit-transform:rotate(5deg);}
+  50% {-webkit-transform:rotate(0deg);}
+  100% {-webkit-transform:rotate(-5deg);}
+}
+
+.wiggler{
+  #animation > ._(
+    wiggle,
+    0.25s,
+    infinite,
+    linear,
+    alternate
+  );
+}
+</code>
+                </pre>
+                <div class='live'>
+                  <div class='box wiggler'>
+                  </div>
+                </div>
+              </div>
+            </aside>
+
+          </div>
+        </section> 
         <!-- end animation -->
+
 
         <!-- css3 -->
         <section>
           <div>
             <h2><span>#</span>css3</h2>
-            <h4>css3 features</h4>
-<pre class='less'><code>
-/*
-* box sizing
-*/
-#css3 > .box-sizing( @boxmodel:border-box); 
+            <h4>mixins for common css3 features</h4>
 
+            <aside class='example'>
+<pre class='major less'><code>#css3 > .box-sizing(
+  @boxmodel: border-box;
+);</code></pre>
+            </aside>
 
-/*
-* border radius
-*/
-// generate an even border radius
-//------------------------------------
-#css3 > .border-radius(@radius);
+            <aside class='example'>
+<pre class='major less'><code>#css3 > .border-radius(
+  @size
+);
 
-
-// different radiuses for top and bottom
-//------------------------------------
-#css3 > .border-radius(@top,@bottom);
-
-
-// different radiuses for each corner
-//------------------------------------
 #css3 > .border-radius(
-  @top-right,
-  @top-left,
-  @bottom-right,
-  @bottom-left
+  @top, @bottom
 );
 
-
-
-/*
-* box shadow
-*/
-#css3 > .box-shadow(
-  @height: 0px, 
-  @v: 0px, 
-  @color:rgba(0,0,0,.25), 
-  @blur: 0px, 
-  @spread: 0px 
+#css3 > .border-radius(
+  @tr, @tl, @br, @bl
 );
-
-
-
-/*
-* transition
-*/
-#css3 > .transition( 
-  @property: all, 
-  @time: 0.5s, 
-  @delay:0s, 
-  @ease:linear 
-);
-
-
-
-/*
-* transition delay
-*/
-#css3 > .transition-delay(@time: .5s);
-
-
-
-/*
-* user select
-* https://developer.mozilla.org/en-US/docs/Web/CSS/user-select
-*/
-#css3 > .user-select(@select:none);
-
-
-
-/*
-* perspective
-* https://developer.mozilla.org/en-US/docs/Web/CSS/perspective?search=5e02406120585154
-*/
-#css3 > .perspective(@num:1000px);
-
-
-
-/*
-* perspective origin
-* https://developer.mozilla.org/en-US/docs/Web/CSS/perspective-origin
-*/
-#css3 > .perspective-origin(@x: 50%, @y: 50%);
 </code></pre>
+              <h5>Example</h5>
+              <div class='row'>
+                <pre class="less">
+<code>.even{
+  #css3 > .border-radius(8px);
+}
 
+.top-bottom{
+  #css3 > .border-radius(8px,32px);
+}
+
+.four-sided{
+  #css3 > .border-radius(0px,8px,16px,24px);
+}
+</code>
+                </pre>
+                <div class='live horizontal-box'>
+                  <div class='box even'>even
+                  </div>
+                  <div class='box top-bottom'>
+                    top bottom
+                  </div>
+                  <div class='box four-sided'>
+                    4 sided
+                  </div>
+                </div>
+            </aside>
+
+          </div>
+        </section> 
+        <!-- end css3 -->
+
+        <!-- position -->
+        <section>
+          <div>
+            <h2><span>#</span>position</h2>
+            <h4>positioning conveniences</h4>
+
+            <aside class='example'>
+<pre class='major less'><code>#absolute > .top-left(
+  @top: 20px,
+  @left: 20px
+);</code></pre>
+
+<pre class='major less'><code>#absolute > .bottom-right(
+  @bottom: 20px,
+  @right: 20px
+);</code></pre>
+
+<pre class='major less'><code>#fixed > .top-right(
+  @top: 20px,
+  @right: 20px
+);</code></pre>
+
+<pre class='major less'><code>#relative > .top(
+  @top: 20px
+);</code></pre>
+
+<pre class='major less'><code>#absolute > .left(
+  @left: 20px
+);</code></pre>
+
+            </aside>
         </section>
-        <!-- end css3s -->
+        <!-- end position -->
 
       </main>
       
