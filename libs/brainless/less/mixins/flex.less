@@ -1,0 +1,75 @@
+#flex {
+	.container(@direction: row, @type: flex){
+		display: -webkit-flex;
+		display: @type;
+		-webkit-flex-direction: row;
+		flex-direction: row;
+	}
+
+	.direction(@direction) when (@direction = "ltr"){
+		-webkit-flex-direction: row;
+		flex-direction: row;
+	}
+
+	.direction(@direction) when (@direction = "rtl"){
+		-webkit-flex-direction: reverse-row;
+		flex-direction: reverse-row;
+	}
+
+	.justify(@val) when (@val = "left"){
+		-webkit-justify-content: flex-start;
+		justify-content: reverse-row;
+	}
+
+	.justify(@val) when (@val = "right"){
+		-webkit-justify-content: flex-end;
+		justify-content: flex-end;
+	}
+
+	.justify(@val) when (@val = "center"){
+		-webkit-justify-content: flex-end;
+		justify-content: center;
+	}
+
+	.justify(@val) when (@val = "justified"){
+		-webkit-justify-content: flex-end;
+		justify-content: space-between;
+	}
+
+	.justify(@val) when (@val = "space-around"){
+		justify-content: space-around;
+	}
+
+	.align(@val) when (@val = "top"){
+		align-items: flex-start;
+	}
+
+	.align(@val) when (@val = "bottom"){
+		align-items: flex-end;
+	}
+
+	.align(@val) when (@val = "center"){
+		align-items: center;
+	}
+
+	.align(@val) when (@val = "stretch"){
+		align-items: stretch;
+	}
+
+	//child properties
+	.grow(@num:2){
+		flex-grow: @number;
+	}
+
+	.shrink(@num:1){
+		flex-shrink: @number;
+	}
+
+	.basis(@width){
+		flex-basis: @width;
+	}
+	.width(@width){
+		.basis(@width);
+	}
+
+}

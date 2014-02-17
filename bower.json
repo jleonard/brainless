@@ -1,0 +1,13 @@
+{
+  "name": "brainless",
+  "version": "0.0.1",
+  "main": "/",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "lorem": "https://github.com/jleonard/loremjs.git",
+    "brainless": "~2.2.0"
+  }
+}

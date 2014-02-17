@@ -1,0 +1,68 @@
+// variables
+//------------------------------------
+@import 'vars/variables.less';
+@import 'vars/colors.less';
+
+// mixins
+//------------------------------------
+@pathToBrainless : "../libs/brainless/less/";
+@import "@{pathToBrainless}mixins/animation.less";
+@import "@{pathToBrainless}mixins/css3.less";
+@import "@{pathToBrainless}mixins/filter.less";
+@import "@{pathToBrainless}mixins/flex.less";
+@import "@{pathToBrainless}mixins/grid.less";
+@import "@{pathToBrainless}mixins/position.less";
+@import "@{pathToBrainless}mixins/reset.less";
+@import "@{pathToBrainless}mixins/transform.less";
+@import "@{pathToBrainless}mixins/type.less";
+@import "@{pathToBrainless}mixins/util.less";
+
+// reset
+//------------------------------------
+@import "includes/normalize.less";
+
+// @font-face & @keyframes
+//------------------------------------
+@import "includes/font-face.less";
+@import "includes/keyframes.less";
+
+// scaffolding: general
+//------------------------------------
+*,
+*:before,
+*:after {
+  #css3 > .box-sizing(border-box);
+}
+
+html{
+  -ms-touch-action: none; // prevent ie's default touch behaviors.
+  touch-action: none;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+}
+
+body{
+  font-family: @sans;
+  font-size: @bodyFontSize;
+  margin: 0;
+  height: 100%;
+}
+
+// conveniences
+//------------------------------------
+.horizontal-box{
+  > *{
+    #util > .horizontal-box-item(10px);
+  }
+}
+
+// the core html ui elements
+//------------------------------------
+@import 'includes/elements.less';
+
+// components
+//------------------------------------
+
+// pages (aka page level styles)
+//------------------------------------
+

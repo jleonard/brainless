@@ -1,0 +1,80 @@
+// elements: text
+//------------------------------------
+h1,.h1{}
+
+h2,.h2{}
+
+h3,.h3{}
+
+h4,.h4{}
+
+h5,.h5{}
+
+h6,.h6{}
+
+p,.p{}
+
+blockquote, .blockquote{}
+
+// elements: links and buttons
+//------------------------------------
+a{
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+a.button, button{
+  display: inline-block;
+}
+
+// elements: lists
+//------------------------------------
+dl,ol,ul{}
+
+dl{
+  dt{}
+  dd{}
+}
+
+ol{
+  li{}
+}
+
+ul{
+  li{}
+}
+
+// elements: forms
+//------------------------------------
+
+// placeholder text mixin
+.placeholder-style(){}
+
+form{}
+
+input{}
+
+input{
+  ::-webkit-input-placeholder { .placeholder-style(); }
+  :-moz-placeholder { .placeholder-style(); }
+  ::-moz-placeholder { .placeholder-style(); }
+  :-ms-input-placeholder { .placeholder-style(); }
+}
+
+input[type="text"]{}
+
+input[type="search"]{
+  -webkit-appearance: searchfield;
+}
+
+input[type="submit"]{}
+
+input[type="button"]{}
+
+input[type="radio"]{}
+
+input[type="checkbox"]{}
+
+textarea{}

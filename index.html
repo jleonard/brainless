@@ -1,410 +1,55 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 ie-7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 ie-8"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie-9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Brain.less</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Brainless : A collection of less utilities." />
+    <meta property="og:title" content="Brian.less">
+		<meta property="og:description" content="A collection of helpful .less mixins">
+		<!--<meta property="og:image" content="">-->
 
-    <link href='http://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css'>
-    
-    <link rel="stylesheet" href="javascripts/highlight.js/styles/tomorrow-night-bright.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/gh_pages.css">
-    <!--<script src="javascripts/highlight.js/highlight.pack.js"></script>-->
-    
-    <!--<script>hljs.initHighlightingOnLoad();</script>-->
 
-    <title>Brainless</title>
+    <link rel="canonical" href="CANONICAL_URL">
+    <link rel="dns-prefetch" href="//ajax.googleapis.com">
+    <link rel="stylesheet" href="css/app.css">
 
-  </head>
-
-  <body>
-
-    <header>
-
-      <div class="inner">
-        <h1>brainless <span>A collection of .less utilities.</span></h1>
-
-        <div class="major-actions">
-          <a class="gh-btn" id="gh-btn" href="https://github.com/jleonard/brainless/" target="_blank"> <span class="gh-ico"></span> <span class="gh-text" id="gh-text">GitHub project</span> 
-          </a>
-          <a class="gh-btn" id="gh-btn" href="https://github.com/jleonard/brainless/archive/master.zip" target="_blank"> <span class="gh-ico"></span> <span class="gh-text" id="gh-text">Download</span> 
-          </a>
-        </div>
+    <!--<script src="js/vendor/modernizr-2.6.2.min.js"></script>-->
+    </head>
+    <body>
+    	<section>
+    		<div>
+    			<h1>Brain.less</h1>
+    			<h2>A collection of helpful .less mixins</h2>
+    			<div class="major-actions">
+          	<a class="gh-btn" id="gh-btn" href="https://github.com/jleonard/brainless/" target="_blank"> <span class="gh-ico"></span> <span class="gh-text" id="gh-text">GitHub project</span> 
+          	</a>
+          	<a class="gh-btn" id="gh-btn" href="https://github.com/jleonard/brainless/archive/master.zip" target="_blank"> <span class="gh-ico"></span> <span class="gh-text" id="gh-text">Download</span> 
+          	</a>
+        	</div>
         
-        <div class="actions">
-          <iframe src="http://ghbtns.com/github-btn.html?user=jleonard&repo=brainless&type=watch&count=true"
+        	<div class="actions">
+          	<iframe src="http://ghbtns.com/github-btn.html?user=jleonard&repo=brainless&type=watch&count=true"
   allowtransparency="true" frameborder="0" scrolling="0" width="80" height="20"></iframe>
-          <iframe src="http://ghbtns.com/github-btn.html?user=jleonard&repo=brainless&type=fork&count=true"
+          	<iframe src="http://ghbtns.com/github-btn.html?user=jleonard&repo=brainless&type=fork&count=true"
   allowtransparency="true" frameborder="0" scrolling="0" width="80" height="20"></iframe>
-        </div>
-      </div>
-    </header>
+        	</div>
 
-    <section>
-      <h2>Position</h2>
-      <h3>Simple position declarations for <code>absolute</code>, <code>relative</code>, <code>fixed</code> and <code>sticky</code>.</h3>
-
-      <!-- x -->
-      <h6>.left( @top) <em>or</em> .x( @left )</h6>
-      <div class="example">
-        <pre class="less"><code>
-        /* less */
-        .foo{
-          #relative > .x(20px);
-        }
-        
-
-        /* css output */
-        .foo{
-          position: relative;
-          left: 20px;
-        }
-
-        </code></pre>
-        <div class="content">
-          <div class="demo box position x">hi</div>
-        </div>
-      </div>
-
-      <!-- y -->
-      <h6>.top(@top) <em>or</em> .y( @top )</h6>
-      <div class="example">
-        <pre class="less"><code>
-        /* less */
-        .foo{
-          #relative > .y(20px);
-        }
-        
-
-        /* css output */
-        .foo{
-          position: relative;
-          top: 20px;
-        }
-
-        </code></pre>
-        <div class="content">
-          <div class="demo box position y">hi</div>
-        </div>
-      </div>
-
-      <h6>.top-left( @top, @left );</h6>
-      <div class="example">
-        <pre class="less"><code>
-        /* less */
-        .foo{
-          #absolute > .top-left(20px,40px);
-        }
-        
-
-        /* css output */
-        .foo{
-          position: absolute;
-          top: 20px;
-          left: 40px;
-        }
-
-        </code></pre>
-        <div class="content">
-          <div class="demo box position top-left">hi</div>
-        </div>
-      </div>
-
+    		</div>
+    	</section>
       
-
-      <!-- top-right -->
-      <h6>.top-right( @top, @right );</h6>
-      <div class="example">
-        <pre class="less"><code>
-        /* less */
-        .foo{
-          #absolute > .top-right(20px,40px);
-        }
-        
-
-        /* css output */
-        .foo{
-          position: absolute;
-          top: 20px;
-          right: 40px;
-        }
-
-        </code></pre>
-        <div class="content">
-          <div class="demo box position top-right">hi</div>
-        </div>
-      </div>
-
-      <!-- bottom-left -->
-      <h6>.bottom-left( @bottom, @left );</h6>
-      <div class="example">
-        <pre class="less"><code>
-        /* less */
-        .foo{
-          #absolute > .bottom-left(20px,40px);
-        }
-        
-
-        /* css output */
-        .foo{
-          position: absolute;
-          bottom: 20px;
-          left: 40px;
-        }
-
-        </code></pre>
-        <div class="content">
-          <div class="demo box position bottom-left">hi</div>
-        </div>
-      </div>
-
-      <!-- bottom-right -->
-      <h6>.bottom-right( @bottom, @right );</h6>
-      <div class="example">
-        <pre class="less"><code>
-        /* less */
-        .foo{
-          #absolute > .bottom-right(20px,40px);
-        }
-        
-
-        /* css output */
-        .foo{
-          position: absolute;
-          bottom: 20px;
-          right: 40px;
-        }
-
-        </code></pre>
-        <div class="content">
-          <div class="demo box position bottom-right">hi</div>
-        </div>
-      </div>
-    </section>
-
-
-    <!--
-      TYPE
-    -->
-    <section>
-      <h2>Type</h2>
-      <h3>Shorthands for working with type.</h3>
-      <div class="example">
-        <pre class="less"><code>
-        /* font-weight & font-style */
-        .bold{
-          #type > .bold();
-        }
-
-        .light{
-          #type > .light();
-        }
-
-        .italic{
-          #type > .italic();
-        }
-
-        .oblique{
-          #type > .italic();
-        }
-
-        /* text-transform */
-        .uppercase{
-          #type > .uppercase();
-        }
-
-        .lowercase{
-          #type > .lowercase();
-        }
-
-        .capitalize{
-          #type > .capitalize();
-        }
-
-        .underline{
-          #type > .underline();
-        }
-
-        .overline{
-          #type > .overline();
-        }
-
-        /* font-variant */
-        .smallcaps{
-          #type > .smallcaps();
-        }
-
-        </code></pre>
-        <div class="content" style="padding: 20px;">
-          <p class="text-demo bold" data-lorem="2-5w"></p>
-          <p class="text-demo light" data-lorem="2-5w"></p>
-          <p class="text-demo italic" data-lorem="2-5w"></p>
-          <p class="text-demo oblique" data-lorem="2-5w"></p>
-          <p class="text-demo uppercase" data-lorem="2-5w"></p>
-          <p class="text-demo lowercase" data-lorem="2-5w"></p>
-          <p class="text-demo captialize" data-lorem="2-5w"></p>
-          <p class="text-demo smallcaps" data-lorem="2-5w"></p>
-          <p class="text-demo underline" data-lorem="2-5w"></p>
-          <p class="text-demo overline" data-lorem="2-5w"></p>
-        </div>
-      </div>
-    </section>
-
-    <!--
-      CSS3
-    -->
-    <section>
-      <h2>CSS3</h2>
-      <h3>Reset common .css properties to their default values.</h3>
-
-      <div class="example">
-        <pre class="less"><code>
-        /* .border-radius */
-        .one{
-          #css3 > .border-radius(5px);
-        }
-        .two{
-          #css3 > .border-radius(0px,20px);
-        }
-        .three{
-          #css3 > .border-radius(5px,10px,0px,40px);
-        }
-
-        </code></pre>
-        <div class="content" style="padding: 20px;">
-          <div class="demo box css3 border-radius-1">1</div>
-          <div class="demo box css3 border-radius-2">2</div>
-          <div class="demo box css3 border-radius-4">3</div>
-        </div>
-      </div>
-
-      <div class="example">
-        <pre class="less"><code>
-        /* .less */
-        .foo{
-          #css3 > .transition(background-color, 0.5s, 1s);
-          background-color: #0EBFE9;
-          &:hover{
-            background-color: transparent;
-          }
-        }
-
-        /* .css output */
-        .foo{
-          -webkit-transition: background-color .5s linear;
-          -moz-transition: background-color .5s linear;
-          -ms-transition: background-color .5s linear;
-          -o-transition: background-color .5s linear;
-          transition: background-color .5s linear;
-
-          -webkit-transition-delay: 1s;
-          -moz-transition-delay: 1s;
-          -o-transition-delay: 1s;
-          transition-delay: 1s;
-
-          background-color: #0ebfe9;
-
-        }
-
-        .foo:hover{
-          background-color: transparent;
-        }
-       
-        </code></pre>
-        <div class="content" style="padding: 20px;">
-          <div class="demo box css3 transition">hi</div>
-        </div>
-      </div>
-
-    </section>
-
-    <!--
-      RESET
-    -->
-    <section>
-      <h2>Reset</h2>
-      <h3>Reset common .css properties to their default values.</h3>
-
-      <div class="example">
-        <pre class="less"><code>
-        /* less */
-        .foo{
-          padding: 20px;
-          text-transform: uppercase;
-          border: 1px solid #0EBFE9;
-          &:hover{
-            #reset > ._(padding);
-            #reset > ._(text-transform);
-            #reset > ._(border);
-          }
-        }
-
-        </code></pre>
-        <div class="content" style="padding: 20px;">
-          <div class="demo box reset">hi</div>
-        </div>
-      </div>
-
-      <h6>The <code>#reset > ._(@property)</code> mixin will accept any of the following properties</h6>
-
-      <dl>
-        <dt>Box Model</dt>
-          <dd>border</dd>
-          <dd>box-sizing</dd>
-          <dd>height</dd>
-          <dd>width</dd>
-          <dd>max-height</dd>
-          <dd>max-width</dd>
-          <dd>min-height</dd>
-          <dd>min-width</dd>
-          <dd>margin</dd>
-          <dd>padding</dd>
-      </dl>
-      <dl>
-        <dt>Positioning</dt>
-          <dd>position</dd>
-          <dd>top</dd>
-          <dd>right</dd>
-          <dd>bottom</dd>
-          <dd>left</dd>
-          <dd>clear</dd>
-          <dd>float</dd>
-      </dl>
-      <dl>
-        <dt>Type</dt>
-          <dd>font-style</dd>
-          <dd>font-weight</dd>
-          <dd>font-variant</dd>
-          <dd>letter-spacing</dd>
-          <dd>line-height</dd>
-          <dd>text-transform</dd>
-      </dl>
-      <dl>
-        <dt>Misc</dt>
-          <dd>background-color</dd>
-          <dd>background-image</dd>
-          <dd>box-shadow</dd>
-          <dd>cursor</dd>
-          <dd>overflow</dd>
-          <dd>transform</dd>
-          <dd>z-index</dd>
-      </dl>
-
-      
-
-    </section>
-   
-    <!-- FOOTER  -->
-    <footer>
-      <div class="inner">
-        <p class="copyright">Brainless maintained by <a href="https://github.com/jleonard">jleonard</a></p>
-      </div>
-    </footer>
-
-    <script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="javascripts/hiless.js"></script>
-    <script src="javascripts/lorem.js"></script>
-    <script src="javascripts/main.js"></script>
+      <script src="http://code.jquery.com/jquery.min.js"></script>
+      <script>
+          var _gaq=[['_setAccount','UA-37507961-1'],['_trackPageview']];
+          (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+          g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+          s.parentNode.insertBefore(g,s)}(document,'script'));
+      </script>
   </body>
 </html>
