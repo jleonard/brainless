@@ -1,9 +1,9 @@
 #animation {
-  ._(@keyframes,@time:0.15s,@repeat:infinite,@easing:linear){
-    -webkit-animation : @keyframes @time @repeat @easing;
-    -moz-animation    : @keyframes @time @repeat @easing;
-    -o-animation      : @keyframes @time @repeat @easing;
-    -ms-animation     : @keyframes @time @repeat @easing;
-    animation         : @keyframes @time @repeat @easing;
+  ._(@keyframes,@time:0.15s,@repeat:infinite,@easing:linear, @direction: alternate){
+    -webkit-animation : @keyframes @time @repeat @easing @direction;
+    -moz-animation    : @keyframes @time @repeat @easing @direction;
+    -o-animation      : @keyframes @time @repeat @easing @direction;
+    -ms-animation     : @keyframes @time @repeat @easing @direction;
+    animation         : @keyframes @time @repeat @easing @direction;
   }
 }

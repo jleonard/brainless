@@ -8,6 +8,7 @@
   ],
   "dependencies": {
     "lorem": "https://github.com/jleonard/loremjs.git",
-    "brainless": "~2.2.0"
+    "brainless": "~2.2.0",
+    "highlightjs": "~8.0.0"
   }
 }

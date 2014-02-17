@@ -42,10 +42,35 @@ html{
 }
 
 body{
+  border-top: 10px solid @lightSky;
   font-family: @sans;
   font-size: @bodyFontSize;
   margin: 0;
   height: 100%;
+  background: @pageBg;
+  color: @textColor;
+}
+
+section{
+  > div{
+    position: relative;
+    padding: @baseUnit * 5;
+    margin: 0 auto;
+    width: 80%;
+  }
+  h2{
+    color: @yellow;
+    span{
+      color: @brightRed;
+    }
+  }
+  h4{
+    color: #fff;
+  }
+}
+
+.row{
+  #grid > .row();
 }
 
 // conveniences
@@ -62,7 +87,83 @@ body{
 
 // components
 //------------------------------------
+@import 'includes/examples.less';
+
+div.sidebar{
+  border-top: 10px solid @lightWater;
+  background-color: @darkWater;
+  #util > .size(300px,100%);
+  #fixed > .top-left();
+  #css3 > .transition(all,0.25s);
+  #transform > .translateX(0%);
+  z-index: @zUI;
+  padding: @baseUnit * 5;
+  font-size: 1.2em;
+  &.off{
+    #transform > .translateX(-90%);
+  }
+  li{
+    line-height: 32px;
+    border-bottom: 1px solid @lightWater;
+    cursor: pointer;
+    #css3 > .transition(color,0.25s);
+    span{
+      #css3 > .transition(color,0.25s);
+    }
+    &:hover{
+      color: @yellow;
+      span{
+        color: @brightRed;
+      }
+    }
+  }
+}
+
+.example{
+  margin: @baseUnit * 2 0;
+  padding: @baseUnit;
+  border-top: 1px solid @lightSky;
+  pre{
+    float: left;
+    width: 50%;
+    background-color: none;
+    code, .hljs{
+      background-color: transparent !important;
+    }
+    &.major{
+      #reset > ._(float);
+      width: 100%;
+      font-size: 1.5em;
+    }
+  }
+  .live{
+    float: left;
+    width: 50%;
+    padding: @baseUnit * 5;
+    padding-top: 0;
+  }
+  .box{
+    #util > .square(100px);
+    background-color: @lightSky;
+    border: 5px solid @darkWater;
+    padding: 8px;
+    font-weight: bold;
+    color: #fff;
+  }
+}
 
 // pages (aka page level styles)
 //------------------------------------
-
+main{
+  #css3 > .transition(all,0.25s);
+  #transform > .translateX(0%);
+  &.off{
+    #transform > .translateX(30%);
+  }
+}
+section.intro{
+  .buttons{}
+  .actions{
+    #absolute > .top-right(20px,20px);
+  }
+}

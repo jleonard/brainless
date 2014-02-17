@@ -10,3 +10,4 @@ CVS
 node_modules
 
 # project specific
+.vagrant/

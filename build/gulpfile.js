@@ -52,6 +52,7 @@ gulp.task('deploy', function(){
 */
 gulp.task('watch', function () {
   gulp.watch('../css/**/*.less', ['less']);
+  gulp.watch('../*.html', ['less']);
 });
 
 gulp.task('default', ['less','watch']);

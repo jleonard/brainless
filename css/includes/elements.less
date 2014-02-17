@@ -1,37 +1,87 @@
 // elements: text
 //------------------------------------
-h1,.h1{}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+h1,.h1{
+  font-size: 7.25em;
+  letter-spacing: -0.025em;
+}
 
-h2,.h2{}
+h2,.h2{
+  font-size: 2em;
+  margin: @baseUnit 0;
+}
 
-h3,.h3{}
+h3,.h3{
+  font-size: 1.4em;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: -0.020em;
+}
 
-h4,.h4{}
+h4,.h4{
+  font-size: 1.2em;
+  font-weight: bold;
+}
 
-h5,.h5{}
+h5,.h5{
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: -0.020em;
+  margin: @baseUnit * 2 0;
+}
 
 h6,.h6{}
 
-p,.p{}
+p,.p{
+  font-size: 1.2em;
+  line-height: 1.8em;
+}
 
-blockquote, .blockquote{}
+blockquote, .blockquote{
+  font-size: 1.3em;
+  line-height: 1.7em;
+  margin: 30px 0;
+  padding: @baseUnit * 2;
+  background-color: darken(@pageBg,5%);
+  border-left: 8px solid darken(@pageBg,30%);
+}
 
 // elements: links and buttons
 //------------------------------------
 a{
+  #css3 > .transition(all,0.5s);
+  color: @textColor;
   text-decoration: none;
+  font-weight: bold;
   &:hover{
+    color: lighten(@textColor,30%);
     text-decoration: none;
   }
 }
 
 a.button, button{
+  background-color: lighten(@pageBg, 20%);
+  border: 1px solid #888;
+  padding: @baseUnit;
   display: inline-block;
+  &:hover{
+    color: lighten(@textColor,80%);
+    background-color: darken(@pageBg,40%);
+  }
+}
+
+pre{
+  margin: 0;
+  &.major{
+    font-size: 3em;
+  }
 }
 
 // elements: lists
 //------------------------------------
-dl,ol,ul{}
+dl,ol,ul{ list-style-type: none; margin: 0; padding: 0; }
 
 dl{
   dt{}
