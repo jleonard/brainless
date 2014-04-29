@@ -15,21 +15,21 @@
 
   // horizontal layouts. this gets applied to the children
   // -----------------------------------------------
-  .horizontal-box-item(@margin:20px){
+  .horizontal-box-item(@padding:20px){
     float: left;
-    margin-left: @margin / 2;
-    margin-right: @margin / 2;
+    padding-left: @padding / 2;
+    padding-right: @padding / 2;
     &:first-child{
-      margin-left: 0;
+      padding-left: 0;
     }
     &:last-child{
-      margin-right: 0;
+      padding-right: 0;
     }
   }
 
-  .horizontal-box(@margin:20px){
+  .horizontal-box(@padding:20px){
     > *{
-      .horizontal-box-item(@margin);
+      .horizontal-box-item(@padding);
     }
   }
 
