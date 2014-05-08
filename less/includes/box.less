@@ -1,0 +1,43 @@
+#box{
+
+	// margin
+  // ---------------------------
+  .margin(@val){
+  	margin: @val;
+  }
+  .margin(@tb,@lr){
+  	margin: @tb @lr;
+  }
+  .margin(@t,@lr,@b){
+  	margin: @t @lr @b;
+  }
+  .margin(@t,@r,@b,@l){
+  	margin: @t @r @b @l;
+  }
+
+	// padding
+  // ---------------------------
+  .padding(@val){
+  	padding: @val;
+  }
+  .padding(@tb,@lr){
+  	padding: @tb @lr;
+  }
+  .padding(@t,@lr,@b){
+  	padding: @t @lr @b;
+  }
+  .padding(@t,@r,@b,@l){
+  	padding: @t @r @b @l;
+  }
+
+	// sizing conveniences
+  // ---------------------------
+  .size(@width:100px, @height:100px) {
+    width: @width;
+    height: @height;
+  }
+  .square(@size:100px) {
+    .size(@size, @size);
+  }
+  
+}
