@@ -2,36 +2,36 @@
 
   .box-sizing(@boxmodel) {
     -webkit-box-sizing: @boxmodel;
-    -moz-box-sizing: @boxmodel;
-    box-sizing: @boxmodel;
+    -moz-box-sizing   : @boxmodel;
+    box-sizing        : @boxmodel;
   }
 
   // background clipping 
   .background-clip(@clip) {
     -webkit-background-clip: @clip;
-    -moz-background-clip: @clip;
-    background-clip: @clip;
+    -moz-background-clip   : @clip;
+    background-clip        : @clip;
   }
 
   // Background sizing
   .background-size(@size) {
     -webkit-background-size: @size;
-    -moz-background-size: @size;
-    -o-background-size: @size;
-    background-size: @size;
+    -moz-background-size   : @size;
+    -o-background-size     : @size;
+    background-size        : @size;
   }
 
   .border-radius(@top, @bottom){
-    border-top-right-radius: @top;
-    border-top-left-radius: @top;
+    border-top-right-radius   : @top;
+    border-top-left-radius    : @top;
     border-bottom-right-radius: @bottom;
-    border-bottom-left-radius: @bottom;
+    border-bottom-left-radius : @bottom;
   }
   .border-radius(@tr, @tl, @br, @bl){
-    border-top-right-radius: @tr;
-    border-top-left-radius: @tl;
+    border-top-right-radius   : @tr;
+    border-top-left-radius    : @tl;
     border-bottom-right-radius: @br;
-    border-bottom-left-radius: @bl;
+    border-bottom-left-radius : @bl;
   }
   .border-radius(@radius){
     border-radius: @radius;
@@ -44,6 +44,30 @@
   .box-shadow(@h: 0px, @v: 0px, @color:rgba(0,0,0,.25), @blur: 0px, @spread: 0px ){
     -webkit-box-shadow: @h @v @blur @spread @color;
       box-shadow: @h @v @blur @spread @color;
+  }
+
+  .columns(@count:3,@gap:10px){
+    -moz-column-count   : @count;
+    -webkit-column-count: @count;
+    column-count        : @count;
+    
+    -moz-column-gap     : @gap;
+    -webkit-column-gap  : @gap;
+    column-gap          : @gap;
+  }
+
+  .column-rule(@width:1px,@style:solid,@color:#222){
+    -moz-column-rule-color   : @color;
+    -webkit-column-rule-color: @color;
+    column-rule-color        : @color;
+    
+    -moz-column-rule-style   : @style;
+    -webkit-column-rule-style: @style;
+    column-rule-style        : @style;
+    
+    -moz-column-rule-width   : @width;
+    -webkit-column-rule-width: @width;
+    column-rule-width        : @width;
   }
 
   // opacity

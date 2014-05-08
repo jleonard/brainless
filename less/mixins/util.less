@@ -13,7 +13,31 @@
     }
   }
 
-  // horizontal layouts. this gets applied to the children
+  .center{
+    #absolute > .top-left(50%,50%);
+    #transform > .translateX(-50%);
+    #transform > .translateY(-50%);
+  }
+
+  .centerX(){
+    left: 50%;
+    #transform > .translateX(-50%);
+  }
+
+  .centerY(){
+    top: 50%;
+    #transform > .translateY(-50%);
+  }
+
+  // center block elements
+  // ---------------------------
+  .center-block() {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // horizontal layouts.
   // -----------------------------------------------
   .horizontal-box-item(@margin:20px){
     float: left;
@@ -46,15 +70,7 @@
 
   // center block elements
   // ---------------------------
-  .center-block() {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  // center block elements
-  // ---------------------------
-  .position-offscreen(){
+  .offscreen(){
     position: absolute;
     left: -9999px;
   }
