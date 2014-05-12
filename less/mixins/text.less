@@ -1,11 +1,7 @@
-#type{
+#text{
 
-	// decoration and decoration conveniences
+	// decoration conveniences
 	// --------------------------
-	.decoration(@val){
-		text-decoration: @val;
-	}
-
 	.line-through(){
     text-decoration: line-through;
   }
@@ -18,12 +14,8 @@
   	text-decoration	:	underline;
   }
 
-  // transform and transform conveniences
+  // transform conveniences
 	// --------------------------
-	.transform(@val){
-		text-transform: @val;
-	}
-
 	.capitalize(){
     text-transform: capitalize;
   }
@@ -36,29 +28,18 @@
   	text-transform:	uppercase;
   }
 
-  // type conveniences
-	// --------------------------
-	.size(@size){
-		font-size: @size;
-	}
-
+  // misc.
+  // --------------------------
 	.smallcaps(){
-  	font-variant:	small-caps;
+    font-variant: small-caps;
   }
 
+  .size(@size){
+    font-size: @size;
+  }
 
 	.weight(@val:bold){
 		font-weight: @val;
 	}
-
-
-  
-  .uppercase(){
-  	text-transform	:	uppercase;
-  }
-
-  .lowercase(){
-    text-transform  : lowercase;
-  }
 	
 }

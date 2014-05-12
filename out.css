@@ -1,0 +1,14 @@
+.element {
+  -webkit-transform: translate(50%, 50%), scale(0.5, 0.5);
+  -moz-transform: translate(50%, 50%), scale(0.5, 0.5);
+  -o-transform: translate(50%, 50%), scale(0.5, 0.5);
+  -ms-transform: translate(50%, 50%), scale(0.5, 0.5);
+  transform: translate(50%, 50%), scale(0.5, 0.5);
+}
+.element.dope {
+  -webkit-transform: translateX(-80%);
+  -moz-transform: translateX(-80%);
+  -o-transform: translateX(-80%);
+  -ms-transform: translateX(-80%);
+  transform: translateX(-80%);
+}

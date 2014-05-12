@@ -30,6 +30,12 @@
   	padding: @t @r @b @l;
   }
 
+  .sizing(@val:border-box){
+    -webkit-box-sizing: @val;
+    -moz-box-sizing: @avl;
+    box-sizing: @val;        
+  }
+
 	// sizing conveniences
   // ---------------------------
   .size(@width:100px, @height:100px) {

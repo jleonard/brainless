@@ -4,14 +4,6 @@
   .pos(){
 		position:absolute;
 	}
-	.x( @x: 0px ){
-		.pos();
-		left:	@x;
-	}
-	.y( @y: 0px ){
-		.pos();
-		top:	@x;
-	}
 	.top( @y: 0px ){
 		.pos();
 		top: @y;
@@ -41,18 +33,11 @@
 		right: @x;
 	}
 }
+
 #fixed{
 	.pos(){
 		position:fixed;
 	}
-	.x( @x: 0px ){
-		.pos();
-		left:	@x;
-	}
-	.y( @y: 0px ){
-		.pos();
-		top:	@x;
-	}
 	.top( @y: 0px ){
 		.pos();
 		top: @y;
@@ -82,18 +67,11 @@
 		right: @x;
 	}
 }
+
 #relative{
   .pos(){
 		position:relative;
 	}
-	.x( @x: 0px ){
-		.pos();
-		left: @x;
-	}
-	.y( @y: 0px ){
-		.pos();
-		top: @y;
-	}
 	.top( @y: 0px ){
 		.pos();
 		top: @y;
@@ -123,6 +101,7 @@
 		right: @x;
 	}
 }
+
 #sticky{
   .pos(){
   	position: -webkit-sticky;
@@ -130,14 +109,6 @@
   	position: -ms-sticky;
   	position: -o-sticky;
 		position: sticky;
-	}
-	.x( @x: 0px ){
-		.pos();
-		left:	@x;
-	}
-	.y( @y: 0px ){
-		.pos();
-		top:	@y;
 	}
 	.top( @y: 0px ){
 		.pos();
