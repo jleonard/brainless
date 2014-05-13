@@ -1,0 +1,17 @@
+#css3{
+  .border-radius(@top, @bottom){
+    border-top-right-radius   : @top;
+    border-top-left-radius    : @top;
+    border-bottom-right-radius: @bottom;
+    border-bottom-left-radius : @bottom;
+  }
+  .border-radius(@tr, @tl, @br, @bl){
+    border-top-right-radius   : @tr;
+    border-top-left-radius    : @tl;
+    border-bottom-right-radius: @br;
+    border-bottom-left-radius : @bl;
+  }
+  .border-radius(@radius){
+    border-radius: @radius;
+  }
+}
