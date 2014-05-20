@@ -1,3 +1,70 @@
+/* testing box */
+.box_pad {
+  padding: 2px;
+}
+.box_pad.three {
+  padding: 2px 6px 8px;
+}
+.box_pad.four {
+  padding: 1px 2px 3px 4px;
+}
+.box_pad.short {
+  padding: 1px 2px 3px 4px;
+}
+/* testing margin */
+.box_margin {
+  margin: 2px;
+}
+.box_margin.three {
+  margin: 2px 6px 8px;
+}
+.box_margin.four {
+  margin: 1px 2px 3px 4px;
+}
+.box_margin.short {
+  margin: 1px 2px 3px 4px;
+}
+/* testing margin */
+.box_size {
+  width: 2px;
+  height: 2px;
+}
+.box_size.size {
+  width: 10px;
+  height: 20px;
+}
+.box_size.sizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.box_size.rect {
+  width: 30px;
+  height: 40px;
+}
+.box_combo {
+  margin: 0;
+  padding: 2px;
+}
+.c_br {
+  border-radius: 20px;
+}
+.c_br.two {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.c_br.four {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 40px;
+}
+.c_bs {
+  -webkit-box-shadow: 3px 3px 5px 6px #cccccc, 1px 2px 3px #cc3300;
+  box-shadow: 3px 3px 5px 6px #cccccc, 1px 2px 3px #cc3300;
+}
 .element {
   -webkit-transform: translate(50%, 50%), scale(0.5, 0.5);
   -moz-transform: translate(50%, 50%), scale(0.5, 0.5);
@@ -5,7 +72,7 @@
   -ms-transform: translate(50%, 50%), scale(0.5, 0.5);
   transform: translate(50%, 50%), scale(0.5, 0.5);
 }
-.element.dope {
+.element.alt {
   -webkit-transform: translateX(-80%);
   -moz-transform: translateX(-80%);
   -o-transform: translateX(-80%);

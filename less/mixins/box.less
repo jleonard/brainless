@@ -2,7 +2,7 @@
 
 	// margin
   // ---------------------------
-  .margin(@val){
+  .margin(@val:0){
   	margin: @val;
   }
   .margin(@tb,@lr){
@@ -17,7 +17,7 @@
 
 	// padding
   // ---------------------------
-  .padding(@val){
+  .padding(@val:0){
   	padding: @val;
   }
   .padding(@tb,@lr){
@@ -32,12 +32,15 @@
 
   .sizing(@val:border-box){
     -webkit-box-sizing: @val;
-    -moz-box-sizing: @avl;
+    -moz-box-sizing: @val;
     box-sizing: @val;        
   }
 
 	// sizing conveniences
   // ---------------------------
+  .rect(@width:100px, @height:100px){
+    .size(@width,@height);
+  }
   .size(@width:100px, @height:100px) {
     width: @width;
     height: @height;

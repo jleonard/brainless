@@ -1,9 +1,73 @@
+@import "mixins/box.less";
+@import "mixins/css3.less";
 @import "mixins/transform.less";
+
+/* testing box */
+.box_pad{
+	#box > .padding(2px);
+	&.three{
+		#box > .padding(2px,6px,8px);
+	}
+	&.four{
+		#box > .padding(1px,2px,3px,4px);
+	}
+	&.short{
+		#box > .padding(1px 2px 3px 4px);
+	}
+}
+
+/* testing margin */
+.box_margin{
+	#box > .margin(2px);
+	&.three{
+		#box > .margin(2px,6px,8px);
+	}
+	&.four{
+		#box > .margin(1px,2px,3px,4px);
+	}
+	&.short{
+		#box > .margin(1px 2px 3px 4px);
+	}
+}
+
+/* testing margin */
+.box_size{
+	#box > .square(2px);
+	&.size{
+		#box > .size(10px,20px);
+	}
+	&.sizing{
+		#box > .sizing();
+	}
+	&.rect{
+		#box > .rect(30px,40px);
+	}
+}
+
+.box_combo{
+	#box > .margin();
+	#box > .padding(2px);
+}
+
+.c_br{
+	#css3 > .border-radius(20px);
+	&.two{
+		#css3 > .border-radius(20px,30px);
+	}
+	&.four{
+		#css3 > .border-radius(10px,20px,30px,40px);
+	}
+}
+
+.c_bs{
+	#css3 > .box-shadow(3px 3px 5px 6px #ccc);
+	#css3 > .box-shadow(1px 2px 3px #c30);
+}
 
 .element{
   #transform > .translate(50%,50%);
   #transform > .scale(0.5,0.5);
-  &.dope{
+  &.alt{
     #transform > .translateX(-80%);
   }
 }

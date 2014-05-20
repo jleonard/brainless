@@ -1,4 +1,10 @@
 #css3{
+
+  // border-radius
+  // ---------------------------
+  .border-radius(@radius){
+    border-radius: @radius;
+  }
   .border-radius(@top, @bottom){
     border-top-right-radius   : @top;
     border-top-left-radius    : @top;
@@ -11,7 +17,18 @@
     border-bottom-right-radius: @br;
     border-bottom-left-radius : @bl;
   }
-  .border-radius(@radius){
-    border-radius: @radius;
+
+  // box-shadow
+  // ---------------------------
+  .box-shadow(@shadow){
+    -webkit-box-shadow+: @shadow;
+    box-shadow+        : @shadow;
   }
+
+  // text-shadow
+  // ---------------------------
+  .text-shadow(@shadow){
+    text-shadow: @shadow;
+  }
+
 }
