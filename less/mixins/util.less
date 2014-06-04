@@ -1,7 +1,7 @@
 #util{
 
-  // clearfix
-  // ---------------------------
+// clearfix
+// ---------------------------
   .clearfix() {
     &:before,
     &:after {
@@ -13,9 +13,10 @@
     }
   }
 
-  // horizontal layouts. this gets applied to the children
-  // -----------------------------------------------
-  .horizontal-box-item(@margin:20px){
+// .hbox()
+// floated horizontal layouts with even left/right margins
+// -----------------------------------------------
+  .hbox-item(@margin:20px){
     float: left;
     margin-left: @margin / 2;
     margin-right: @margin / 2;
@@ -27,15 +28,35 @@
     }
   }
 
-  .horizontal-box(@margin:20px){
+  .hbox(@margin:20px){
     > *{
-      .horizontal-box-item(@margin);
+      .hbox-item(@margin);
     }
   }
 
-  // image replacement
-  // source https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
-  // ---------------------------
+// .vbox()
+// vertical layouts with even top/bottom margins
+// -----------------------------------------------
+  .vbox-item(@margin:20px){
+    margin-top: @margin / 2;
+    margin-bottom: @margin / 2;
+    &:first-child{
+      margin-top: 0;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  .vbox(@margin:20px){
+    > *{
+      .vbox-item(@margin);
+    }
+  }
+
+// image replacement
+// source https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
+// ---------------------------
   .image-replacement() {
     font: 0/0 a;
     color: transparent;
@@ -44,23 +65,23 @@
     border: 0;
   }
 
-  // center block elements
-  // ---------------------------
+// center block elements
+// ---------------------------
   .center-block() {
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
 
-  // center block elements
-  // ---------------------------
-  .position-offscreen(){
+// position an element offscreen
+// ---------------------------
+  .offscreen(){
     position: absolute;
     left: -9999px;
   }
 
-  // sizing conveniences
-  // ---------------------------
+// sizing conveniences
+// ---------------------------
   .size(@width:100px, @height:100px) {
     width: @width;
     height: @height;
@@ -69,8 +90,8 @@
     .size(@size, @size);
   }
 
-  // placeholder text for form elements
-  // ---------------------------
+// placeholder text for form elements
+// ---------------------------
   .placeholder(@color: #ccc) {
     &:-moz-placeholder            { color: @color; } // Firefox 4-18
     &::-moz-placeholder           { color: @color; } // Firefox 19+
@@ -78,9 +99,13 @@
     &::-webkit-input-placeholder  { color: @color; } // Safari and Chrome
   }
 
+  .horizontal-align(){
+    #relative > .left(50%);
+    #transform > .translateX(-50%);
+  }
+
   .vertical-align(){
-    position: relative;
-    top: 50%;
+    #relative > .top(50%);
     #transform > .translateY(-50%);
   }
 

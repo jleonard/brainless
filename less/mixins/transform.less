@@ -1,11 +1,20 @@
 #transform{
 
-  // hardware acceleration
-  // ---------------------------
+// backface-visibility convenience
+// ---------------------------
+  .backface-visibility(@val:hidden){
+    backface-visibility: @val;
+    -webkit-backface-visibility: @val;
+  }
+
+// hardware acceleration
+// ---------------------------
   .hardware-acceleration(){
     .translateZ(0);
   }
 
+// transform origin convenience
+// ---------------------------
   .origin(@x:50%,@y:0,@z:0){
     -webkit-transform-origin: @x @y @z;
     -moz-transform-origin: @x @y @z;
@@ -14,6 +23,8 @@
     transform-origin: @x @y @z;
   }
 
+// transform style convenience
+// ---------------------------
 	.style(@style:preserve-3d){
 		-webkit-transform-style : @style;
   	-moz-transform-style    : @style;
@@ -21,20 +32,57 @@
   	-ms-transform-style     : @style;
   	transform-style         : @style;
 	}
-  .translateY(@num:200PX){
+
+// .translate()
+// includes overrides for optional x,y,z arguments
+//------------------------------------
+  .translate(@x:50%){
+    -webkit-transform : translateX(@x);
+    -moz-transform    : translateX(@x);
+    -o-transform      : translateX(@x);
+    -ms-transform     : translateX(@x);
+    transform         : translateX(@x);
+  }
+
+  .translate(@x:50%,@y:50%){
+    -webkit-transform : translateX(@x) translateY(@y);
+    -moz-transform    : translateX(@x) translateY(@y);
+    -o-transform      : translateX(@x) translateY(@y);
+    -ms-transform     : translateX(@x) translateY(@y);
+    transform         : translateX(@x) translateY(@y);
+  }
+
+  .translate(@x:50%,@y:@50%,@z:50%){
+    -webkit-transform : translateX(@x) translateY(@y) translateZ(@z);
+    -moz-transform    : translateX(@x) translateY(@y) translateZ(@z);
+    -o-transform      : translateX(@x) translateY(@y) translateZ(@z);
+    -ms-transform     : translateX(@x) translateY(@y) translateZ(@z);
+    transform         : translateX(@x) translateY(@y) translateZ(@z);
+  }
+
+// .translateY
+//------------------------------------
+// TODO - make these additive.
+  .translateY(@num:200px){
     -webkit-transform : translateY(@num);
     -moz-transform    : translateY(@num);
     -o-transform      : translateY(@num);
     -ms-transform     : translateY(@num);
     transform         : translateY(@num);
   }
-  .translateX(@num:200PX){
+
+// .translateY
+//------------------------------------
+  .translateX(@num:200px){
     -webkit-transform : translateX(@num);
     -moz-transform    : translateX(@num);
     -o-transform      : translateX(@num);
     -ms-transform     : translateX(@num);
     transform         : translateX(@num);
   }
+
+// .translateZ
+//------------------------------------
 	.translateZ(@num:200px){
 		-webkit-transform : translateZ(@num);
   	-moz-transform    : translateZ(@num);
@@ -43,6 +91,36 @@
   	transform         : translateZ(@num);
 	}
 
+// .rotate()
+// includes overrides for optional x,y,z arguments
+//------------------------------------
+// TODO - make these additive.
+  .rotate(@x:50%){
+    -webkit-transform : rotateX(@x);
+    -moz-transform    : rotateX(@x);
+    -o-transform      : rotateX(@x);
+    -ms-transform     : rotateX(@x);
+    transform         : rotateX(@x);
+  }
+
+  .rotate(@x:50%,@y:50%){
+    -webkit-transform : rotateX(@x) rotateY(@y);
+    -moz-transform    : rotateX(@x) rotateY(@y);
+    -o-transform      : rotateX(@x) rotateY(@y);
+    -ms-transform     : rotateX(@x) rotateY(@y);
+    transform         : rotateX(@x) rotateY(@y);
+  }
+
+  .rotate(@x:50%,@y:@50%,@z:50%){
+    -webkit-transform : rotateX(@x) rotateY(@y) rotateZ(@z);
+    -moz-transform    : rotateX(@x) rotateY(@y) rotateZ(@z);
+    -o-transform      : rotateX(@x) rotateY(@y) rotateZ(@z);
+    -ms-transform     : rotateX(@x) rotateY(@y) rotateZ(@z);
+    transform         : rotateX(@x) rotateY(@y) rotateZ(@z);
+  }
+
+// .rotateX
+//------------------------------------
   .rotateX(@x:-90deg){
     -webkit-transform : rotateX(@x);
     -moz-transform    : rotateX(@x);
@@ -51,6 +129,8 @@
     transform         : rotateX(@x);
   }
 
+// .rotateY
+//------------------------------------
   .rotateY(@x:-90deg){
     -webkit-transform : rotateY(@x);
     -moz-transform    : rotateY(@x);
@@ -59,6 +139,8 @@
     transform         : rotateY(@x);
   }
 
+// .rotateZ
+//------------------------------------
   .rotateZ(@x:-90deg){
     -webkit-transform : rotateZ(@x);
     -moz-transform    : rotateZ(@x);
@@ -67,6 +149,8 @@
     transform         : rotateZ(@x);
   }
 
+// .scale
+//------------------------------------
   .scale(@x:2,@y:2){
     -webkit-transform : scale(@x,@y);
     -moz-transform    : scale(@x,@y);
