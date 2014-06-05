@@ -18,17 +18,29 @@
     border-bottom-left-radius : @bl;
   }
 
+  /*
+   * Note, the box-shadow and text-shadow mixins put @color first. 
+   */
+ 
   // box-shadow
   // ---------------------------
-  .box-shadow(@shadow){
-    -webkit-box-shadow+: @shadow;
-    box-shadow+        : @shadow;
+  .box-shadow(@color,@h,@v){
+    -webkit-box-shadow+: @h @v @color;
+    box-shadow+        : @h @v @color;
+  }
+  .box-shadow(@color,@h,@v,@blur){
+    -webkit-box-shadow+: @h @v @blur @color;
+    box-shadow+        : @h @v @blur @color;
+  }
+  .box-shadow(@color,@h,@v,@blur,@spread){
+    -webkit-box-shadow+: @h @v @blur @spread @color;
+    box-shadow+        : @h @v @blur @spread @color;
   }
 
   // text-shadow
   // ---------------------------
-  .text-shadow(@shadow){
-    text-shadow: @shadow;
+  .text-shadow(@color:#777,@h:1px,@v:1px,@blur:2px){
+    text-shadow+: @h @v @blur @color;
   }
 
 }

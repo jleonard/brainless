@@ -8,6 +8,14 @@
 		.pos();
 		top: @y;
 	}
+	.right( @x: 0px ){
+		.pos();
+		right:	@x;
+	}
+	.bottom( @x: 0px ){
+		.pos();
+		bottom:	@x;
+	}
 	.left( @x: 0px ){
 		.pos();
 		left:	@x;
@@ -41,6 +49,14 @@
 	.top( @y: 0px ){
 		.pos();
 		top: @y;
+	}
+	.right( @x: 0px ){
+		.pos();
+		right:	@x;
+	}
+	.bottom( @x: 0px ){
+		.pos();
+		bottom:	@x;
 	}
 	.left( @x: 0px ){
 		.pos();
@@ -76,6 +92,14 @@
 		.pos();
 		top: @y;
 	}
+	.right( @x: 0px ){
+		.pos();
+		right:	@x;
+	}
+	.bottom( @x: 0px ){
+		.pos();
+		bottom:	@x;
+	}
 	.left( @x: 0px ){
 		.pos();
 		left:	@x;
@@ -102,6 +126,9 @@
 	}
 }
 
+// practially no one supports this fyi
+// http://caniuse.com/#search=sticky
+// ---------------------------
 #sticky{
   .pos(){
   	position: -webkit-sticky;
@@ -112,7 +139,15 @@
 	}
 	.top( @y: 0px ){
 		.pos();
-		top:	@y;
+		top: @y;
+	}
+	.right( @x: 0px ){
+		.pos();
+		right:	@x;
+	}
+	.bottom( @x: 0px ){
+		.pos();
+		bottom:	@x;
 	}
 	.left( @x: 0px ){
 		.pos();

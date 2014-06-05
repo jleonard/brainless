@@ -1,0 +1,73 @@
+#animation {
+  ._(@name,@duration:0.15s,@repeat:infinite,@easing:linear){
+    -webkit-animation : @name @duration @repeat @easing;
+    -moz-animation    : @name @duration @repeat @easing;
+    -o-animation      : @name @duration @repeat @easing;
+    -ms-animation     : @name @duration @repeat @easing;
+    animation         : @name @duration @repeat @easing;
+  }
+
+  .delay(@val:0s){
+    animation-delay: @val;
+    -webkit-animation-delay: @val;
+  }
+
+  .direction(@val:alternate){
+    animation-direction:@val;
+    -webkit-animation-direction:@val;
+  }
+
+  .duration(@val:1s){
+    animation-duration: @val;
+    -webkit-duration: @val;
+  }
+
+  .fill-mode(@val:none){
+    animation-fill-mode: @val;
+    -webkit-animation-fill-mode: @val;
+  }
+
+  .iteration-count(@val:infinite){
+    animation-timing-function: @val;
+    -webkit-animation-timing-function: @val;
+  }
+
+  .name(@val){
+    animation-name: @val;
+    -webkit-animation-name: @val;
+  }
+
+  .play-state(@val:running){
+    animation-play-state: @val;
+    -webkit-animation-play-state: @val;
+  }
+
+  .timing-function(@val:linear){
+    .iteration-count(@val);
+  }
+
+  // shorthand conveniences
+  // ---------------------------
+  .easing(@val:linear){
+    .timing-function(@val);
+  }
+
+  .loop(){
+    .direction();
+    .iteration-count();
+  }
+
+  .pause(){
+    .play-state(paused);
+  }
+
+  .play(){
+    .play-state(running);
+  }
+
+  .repeat(@val:infinite){
+    animation-iteration-count: @val;
+    -webkit-animation-iteration-count: @val;
+  }
+
+}
