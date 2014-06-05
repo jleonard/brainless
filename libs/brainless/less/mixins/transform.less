@@ -1,67 +1,165 @@
 #transform{
 
-  // hardware acceleration
-  // ---------------------------
-  .hardware-acceleration(){
-    .translateZ(0);
+  .backface(@val:hidden){
+    -webkit-backface-visibility: @val;
+    -moz-backface-visibility: @val;
+    backface-visibility: @val;
+  }
+
+  .style(@style:preserve-3d){
+    -webkit-transform-style : @style;
+    -moz-transform-style    : @style;
+    -o-transform-style      : @style;
+    -ms-transform-style     : @style;
+    transform-style         : @style;
   }
 
   .origin(@x:50%,@y:0,@z:0){
-    -webkit-transform-origin: @x @y @z;
-    -moz-transform-origin: @x @y @z;
-    -o-transform-origin: @x @y @z;
-    -ms-transform-origin: @x @y @z;
-    transform-origin: @x @y @z;
+    -webkit-transform-origin : @x @y @z;
+    -moz-transform-origin    : @x @y @z;
+    -o-transform-origin      : @x @y @z;
+    -ms-transform-origin     : @x @y @z;
+    transform-origin         : @x @y @z;
   }
 
-	.style(@style:preserve-3d){
-		-webkit-transform-style : @style;
-  	-moz-transform-style    : @style;
-  	-o-transform-style      : @style;
-  	-ms-transform-style     : @style;
-  	transform-style         : @style;
-	}
-  .translateY(@num:200PX){
-    -webkit-transform : translateY(@num);
-    -moz-transform    : translateY(@num);
-    -o-transform      : translateY(@num);
-    -ms-transform     : translateY(@num);
-    transform         : translateY(@num);
-  }
-  .translateX(@num:200PX){
-    -webkit-transform : translateX(@num);
-    -moz-transform    : translateX(@num);
-    -o-transform      : translateX(@num);
-    -ms-transform     : translateX(@num);
-    transform         : translateX(@num);
-  }
-	.translateZ(@num:200px){
-		-webkit-transform : translateZ(@num);
-  	-moz-transform    : translateZ(@num);
-  	-o-transform      : translateZ(@num);
-  	-ms-transform     : translateZ(@num);
-  	transform         : translateZ(@num);
-	}
-	.YZ(@y:90deg,@z:200px){
-		-webkit-transform : rotateY(@y) translateZ(@z);
-  	-moz-transform    : rotateY(@y) translateZ(@z);
-  	-o-transform      : rotateY(@y) translateZ(@z);
-  	-ms-transform     : rotateY(@y) translateZ(@z);
-  	transform         : rotateY(@y) translateZ(@z);
-	}
-  .yz(@y:90deg,@z:200px){
-    .YZ(@y,@z);
+  .perspective(@num:1000px){
+    -moz-perspective: @num;
+    -webkit-perspective: @num;
+    perspective: @num;
   }
 
-  .x(@x:-90deg){
-    -webkit-transform : rotateX(@X);
-    -moz-transform    : rotateX(@X);
-    -o-transform      : rotateX(@X);
-    -ms-transform     : rotateX(@X);
-    transform         : rotateX(@X);
+  .perspective-origin(@x:50%,@y:50%){
+    -moz-perspective-origin: @x @y;
+    -webkit-perspective-origin: @x @y;
+    perspective-origin: @x @y;
   }
-  .X(@num:-90deg){
-    .x(@num);
+
+  // rotate
+  // --------------------------
+  .rotate(@angle){
+    -webkit-transform+ : rotate(@angle);
+    -moz-transform+    : rotate(@angle);
+    -o-transform+      : rotate(@angle);
+    -ms-transform+     : rotate(@angle);
+    transform+         : rotate(@angle);
+  }
+
+  .rotateX(@angle){
+    -webkit-transform+ : rotateX(@angle);
+    -moz-transform+    : rotateX(@angle);
+    -o-transform+      : rotateX(@angle);
+    -ms-transform+     : rotateX(@angle);
+    transform+         : rotateX(@angle);
+  }
+
+  .rotateY(@angle){
+    -webkit-transform+ : rotateY(@angle);
+    -moz-transform+    : rotateY(@angle);
+    -o-transform+      : rotateY(@angle);
+    -ms-transform+     : rotateY(@angle);
+    transform+         : rotateY(@angle);
+  }
+
+  .rotateZ(@angle){
+    -webkit-transform+ : rotateZ(@angle);
+    -moz-transform+    : rotateZ(@angle);
+    -o-transform+      : rotateZ(@angle);
+    -ms-transform+     : rotateZ(@angle);
+    transform+         : rotateZ(@angle);
+  }
+
+  // scale
+  // --------------------------
+  .scale(@x, @y){
+    -webkit-transform+ : scale(@x,@y);
+    -moz-transform+    : scale(@x,@y);
+    -o-transform+      : scale(@x,@y);
+    -ms-transform+     : scale(@x,@y);
+    transform+         : scale(@x,@y);
+  }
+
+  .scaleX(@val){
+    -webkit-transform+ : scaleX(@val);
+    -moz-transform+    : scaleX(@val);
+    -o-transform+      : scaleX(@val);
+    -ms-transform+     : scaleX(@val);
+    transform+         : scaleX(@val);
+  }
+
+  .scaleY(@val){
+    -webkit-transform+ : scaleY(@val);
+    -moz-transform+    : scaleY(@val);
+    -o-transform+      : scaleY(@val);
+    -ms-transform+     : scaleY(@val);
+    transform+         : scaleY(@val);
+  }
+
+  .scaleZ(@val){
+    -webkit-transform+ : scaleZ(@val);
+    -moz-transform+    : scaleZ(@val);
+    -o-transform+      : scaleZ(@val);
+    -ms-transform+     : scaleZ(@val);
+    transform+         : scaleZ(@val);
+  }
+
+  // skew
+  // --------------------------
+  .skew(@x, @y){
+    -webkit-transform+ : skew(@x,@y);
+    -moz-transform+    : skew(@x,@y);
+    -o-transform+      : skew(@x,@y);
+    -ms-transform+     : skew(@x,@y);
+    transform+         : skew(@x,@y);
+  }
+
+  .skewX(@val){
+    -webkit-transform+ : skewX(@val);
+    -moz-transform+    : skewX(@val);
+    -o-transform+      : skewX(@val);
+    -ms-transform+     : skewX(@val);
+    transform+         : skewX(@val);
+  }
+
+  .skewY(@val){
+    -webkit-transform+ : skewY(@val);
+    -moz-transform+    : skewY(@val);
+    -o-transform+      : skewY(@val);
+    -ms-transform+     : scaleY(@val);
+    transform+         : skewY(@val);
+  }
+
+  // translate
+  // --------------------------
+  .translate(@x, @y){
+    -webkit-transform+  : translate(@x,@y);
+    -moz-transform+     : translate(@x,@y);
+    -o-transform+       : translate(@x,@y);
+    -ms-transform+      : translate(@x,@y);
+    transform+          : translate(@x,@y);
+  }
+
+  .translateX(@val){
+    -webkit-transform+ : translateX(@val);
+    -moz-transform+    : translateX(@val);
+    -o-transform+      : translateX(@val);
+    -ms-transform+     : translateX(@val);
+    transform+         : translateX(@val);
+  }
+
+  .translateY(@val){
+    -webkit-transform+ : translateY(@val);
+    -moz-transform+    : translateY(@val);
+    -o-transform+      : translateY(@val);
+    -ms-transform+     : translateY(@val);
+    transform+         : translateY(@val);
+  }
+
+  .translateZ(@val){
+    -webkit-transform+ : translateZ(@val);
+    -moz-transform+    : translateZ(@val);
+    -o-transform+      : translateZ(@val);
+    -ms-transform+     : translateZ(@val);
+    transform+         : translateZ(@val);
   }
 
 }

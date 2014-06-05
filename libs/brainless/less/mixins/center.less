@@ -1,0 +1,27 @@
+#center{
+  // note: this is transform based centering
+  // you'll need position: absolute|relative|fixed
+  // ------------------------------------------------------
+  ._{
+    #absolute > .top-left(50%,50%);
+    #transform > .translateX(-50%);
+    #transform > .translateY(-50%);
+  }
+
+  .x(){
+    left: 50%;
+    #transform > .translateX(-50%);
+  }
+
+  .y(){
+    top: 50%;
+    #transform > .translateY(-50%);
+  }
+
+  .block(){
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}

@@ -1,0 +1,18 @@
+#animation {
+  ._(@keyframes,@time:0.15s,@repeat:infinite,@easing:linear){
+    -webkit-animation : @keyframes @time @repeat @easing;
+    -moz-animation    : @keyframes @time @repeat @easing;
+    -o-animation      : @keyframes @time @repeat @easing;
+    -ms-animation     : @keyframes @time @repeat @easing;
+    animation         : @keyframes @time @repeat @easing;
+  }
+}
+
+#exit{
+	.stage-left(@num:100%){
+		#transform > .translateY(@num);
+	}
+	.stage-right(@num:-100%){
+		#transform > .translateY(@num);
+	}
+}

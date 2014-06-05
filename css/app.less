@@ -1,174 +1,73 @@
-// variables
-//------------------------------------
-@import 'vars/variables.less';
-@import 'vars/colors.less';
+@import 'includes/normalize.less';
 
-// mixins
-//------------------------------------
-@pathToBrainless : "../libs/brainless/less/";
-@import "@{pathToBrainless}mixins/animation.less";
-@import "@{pathToBrainless}mixins/css3.less";
-@import "@{pathToBrainless}mixins/filter.less";
-@import "@{pathToBrainless}mixins/flex.less";
-@import "@{pathToBrainless}mixins/grid.less";
-@import "@{pathToBrainless}mixins/position.less";
-@import "@{pathToBrainless}mixins/reset.less";
-@import "@{pathToBrainless}mixins/transform.less";
-@import "@{pathToBrainless}mixins/type.less";
-@import "@{pathToBrainless}mixins/util.less";
+//@import url(http://fonts.googleapis.com/css?family=Codystar);
+@import 'theme.css';
 
-// reset
-//------------------------------------
-@import "includes/normalize.less";
+@aqua:  #7FDBFF;
+@blue:  #0074D9;
+@navy:  #001F3F;
+@teal:  #39CCCC;
+@green: #2ECC40;
+@olive: #3D9970;
+@lime:  #01FF70;
 
-// @font-face & @keyframes
-//------------------------------------
-@import "includes/font-face.less";
-@import "includes/keyframes.less";
+// Warm
 
-// scaffolding: general
+@yellow:  #FFDC00;
+@orange:  #FF851B;
+@red:     #FF4136;
+@fuchsia: #F012BE;
+@purple:  #B10DC9;
+@maroon:  #85144B;
+
+// Gray Scale
+
+@white:  #fff;
+@silver: #ddd;
+@gray:   #aaa;
+@black:  #111;
+
+@baseUnit: 16px;
+
+@serif          : "Georgia",serif;
+
+
+// scaffolding
 //------------------------------------
 *,
 *:before,
 *:after {
-  #css3 > .box-sizing(border-box);
-}
-
-html{
-  -ms-touch-action: none; // prevent ie's default touch behaviors.
-  touch-action: none;
-  -webkit-font-smoothing: antialiased;
-  height: 100%;
+  box-sizing: border-box;
 }
 
 body{
-  border-top: 10px solid @lightSky;
-  font-family: @sans;
-  font-size: @bodyFontSize;
+  font-size: 1em;
   margin: 0;
   height: 100%;
-  background: @pageBg;
-  color: @textColor;
+  color: @black;
 }
 
-section{
-  > div{
-    position: relative;
-    padding: @baseUnit * 5;
-    margin: 0 auto;
-    width: 80%;
+header{
+  text-align: center;
+  //background-color: @navy;
+  //color: @white;
+  height: 100%;
+  padding: @baseUnit * 2;
+  font-family: @serif;
+  h1{
+    font-size: 7em;
+    font-weight: normal;
+    margin-bottom: 0;
   }
   h2{
-    color: @yellow;
-    span{
-      color: @brightRed;
-    }
-  }
-  h4{
-    color: #fff;
+    font-size: 2em;
+    font-weight: normal;
+    color: #777;
   }
 }
 
-.row{
-  #grid > .row();
-}
-
-// conveniences
-//------------------------------------
-.horizontal-box{
-  > *{
-    #util > .horizontal-box-item(10px);
-  }
-}
-
-// the core html ui elements
-//------------------------------------
-@import 'includes/elements.less';
-
-// components
-//------------------------------------
-@import 'includes/examples.less';
-
-div.sidebar{
-  border-top: 10px solid @lightWater;
-  background-color: @darkWater;
-  #util > .size(300px,100%);
-  #fixed > .top-left();
-  #css3 > .transition(all,0.25s);
-  #transform > .translateX(0%);
-  z-index: @zUI;
-  padding: @baseUnit * 5;
-  font-size: 1.2em;
-  &.off{
-    #transform > .translateX(-90%);
-  }
-  li{
-    line-height: 32px;
-    border-bottom: 1px solid @lightWater;
-    cursor: pointer;
-    #css3 > .transition(color,0.25s);
-    span{
-      #css3 > .transition(color,0.25s);
-    }
-    &:hover{
-      color: @yellow;
-      span{
-        color: @brightRed;
-      }
-    }
-  }
-}
-
-pre,code,.hljs{
-  background-color: transparent !important;
-  font-size: 1.2em;
-}
-
-.example{
-  margin: @baseUnit * 2 0;
-  padding: @baseUnit;
-  border-top: 1px solid @lightSky;
-  pre{
-    float: left;
-    width: 50%;
-    background-color: none;
-    code, .hljs{
-      background-color: transparent !important;
-    }
-    &.major{
-      #reset > ._(float);
-      width: 100%;
-      font-size: 1.5em;
-    }
-  }
-  .live{
-    float: left;
-    width: 50%;
-    padding: @baseUnit * 5;
-    padding-top: 0;
-  }
-  .box{
-    #util > .square(100px);
-    background-color: @lightSky;
-    border: 5px solid @darkWater;
-    padding: 8px;
-    font-weight: bold;
-    color: #fff;
-  }
-}
-
-// pages (aka page level styles)
-//------------------------------------
-main{
-  #css3 > .transition(all,0.25s);
-  #transform > .translateX(0%);
-  &.off{
-    #transform > .translateX(30%);
-  }
-}
-section.intro{
-  .buttons{}
-  .actions{
-    #absolute > .top-right(20px,20px);
-  }
+pre{
+  border: 2px solid #f1f1f1;
+  background-color: #f4f4f4;
+  border-radius: @baseUnit / 2;
 }

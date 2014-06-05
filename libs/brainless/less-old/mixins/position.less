@@ -4,17 +4,17 @@
   .pos(){
 		position:absolute;
 	}
+	.x( @x: 0px ){
+		.pos();
+		left:	@x;
+	}
+	.y( @y: 0px ){
+		.pos();
+		top:	@x;
+	}
 	.top( @y: 0px ){
 		.pos();
 		top: @y;
-	}
-	.right( @x: 0px ){
-		.pos();
-		right:	@x;
-	}
-	.bottom( @x: 0px ){
-		.pos();
-		bottom:	@x;
 	}
 	.left( @x: 0px ){
 		.pos();
@@ -41,22 +41,21 @@
 		right: @x;
 	}
 }
-
 #fixed{
 	.pos(){
 		position:fixed;
 	}
+	.x( @x: 0px ){
+		.pos();
+		left:	@x;
+	}
+	.y( @y: 0px ){
+		.pos();
+		top:	@x;
+	}
 	.top( @y: 0px ){
 		.pos();
 		top: @y;
-	}
-	.right( @x: 0px ){
-		.pos();
-		right:	@x;
-	}
-	.bottom( @x: 0px ){
-		.pos();
-		bottom:	@x;
 	}
 	.left( @x: 0px ){
 		.pos();
@@ -83,22 +82,21 @@
 		right: @x;
 	}
 }
-
 #relative{
   .pos(){
 		position:relative;
 	}
-	.top( @y: 0px ){
+	.x( @x: 0px ){
+		.pos();
+		left: @x;
+	}
+	.y( @y: 0px ){
 		.pos();
 		top: @y;
 	}
-	.right( @x: 0px ){
+	.top( @y: 0px ){
 		.pos();
-		right:	@x;
-	}
-	.bottom( @x: 0px ){
-		.pos();
-		bottom:	@x;
+		top: @y;
 	}
 	.left( @x: 0px ){
 		.pos();
@@ -125,10 +123,6 @@
 		right: @x;
 	}
 }
-
-// practially no one supports this fyi
-// http://caniuse.com/#search=sticky
-// ---------------------------
 #sticky{
   .pos(){
   	position: -webkit-sticky;
@@ -137,17 +131,17 @@
   	position: -o-sticky;
 		position: sticky;
 	}
+	.x( @x: 0px ){
+		.pos();
+		left:	@x;
+	}
+	.y( @y: 0px ){
+		.pos();
+		top:	@y;
+	}
 	.top( @y: 0px ){
 		.pos();
-		top: @y;
-	}
-	.right( @x: 0px ){
-		.pos();
-		right:	@x;
-	}
-	.bottom( @x: 0px ){
-		.pos();
-		bottom:	@x;
+		top:	@y;
 	}
 	.left( @x: 0px ){
 		.pos();

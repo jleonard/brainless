@@ -1,100 +1,46 @@
 #css3{
 
-  .box-sizing(@boxmodel:border-box) {
-    -webkit-box-sizing: @boxmodel;
-    -moz-box-sizing: @boxmodel;
-    box-sizing: @boxmodel;
-  }
-
-  // background clipping 
-  .background-clip(@clip) {
-    -webkit-background-clip: @clip;
-    -moz-background-clip: @clip;
-    background-clip: @clip;
-  }
-
-  // Background sizing
-  .background-size(@size) {
-    -webkit-background-size: @size;
-    -moz-background-size: @size;
-    -o-background-size: @size;
-    background-size: @size;
-  }
-
-  .border-radius(@top, @bottom){
-    border-top-right-radius: @top;
-    border-top-left-radius: @top;
-    border-bottom-right-radius: @bottom;
-    border-bottom-left-radius: @bottom;
-  }
-  .border-radius(@tr, @tl, @br, @bl){
-    border-top-right-radius: @tr;
-    border-top-left-radius: @tl;
-    border-bottom-right-radius: @br;
-    border-bottom-left-radius: @bl;
-  }
+  // border-radius
+  // ---------------------------
   .border-radius(@radius){
     border-radius: @radius;
   }
-
-  .box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25)){
-    -webkit-box-shadow: @shadow;
-      box-shadow: @shadow;
+  .border-radius(@top, @bottom){
+    border-top-right-radius   : @top;
+    border-top-left-radius    : @top;
+    border-bottom-right-radius: @bottom;
+    border-bottom-left-radius : @bottom;
   }
-  .box-shadow(@h: 0px, @v: 0px, @color:rgba(0,0,0,.25), @blur: 0px, @spread: 0px ){
-    -webkit-box-shadow: @h @v @blur @spread @color;
-      box-shadow: @h @v @blur @spread @color;
-  }
-
-  // opacity
-  .opacity(@opacity) {
-    opacity: @opacity;
-    // IE8 filter
-    @opacity-ie: (@opacity * 100);
-    filter: ~"alpha(opacity=@{opacity-ie})";
+  .border-radius(@tr, @tl, @br, @bl){
+    border-top-right-radius   : @tr;
+    border-top-left-radius    : @tl;
+    border-bottom-right-radius: @br;
+    border-bottom-left-radius : @bl;
   }
 
-  // transition
-  .transition( @property: all, @time: 0.5s, @delay:0s, @ease:linear ){
-    -webkit-transition: @property @time @ease;
-    -moz-transition: @property @time @ease;
-    -ms-transition: @property @time @ease;
-    -o-transition: @property @time @ease;
-    transition: @property @time @ease;
-    .transition-delay(@delay);
+  /*
+   * Note, the box-shadow and text-shadow mixins put @color first. 
+   */
+ 
+  // box-shadow
+  // ---------------------------
+  .box-shadow(@color,@h,@v){
+    -webkit-box-shadow+: @h @v @color;
+    box-shadow+        : @h @v @color;
+  }
+  .box-shadow(@color,@h,@v,@blur){
+    -webkit-box-shadow+: @h @v @blur @color;
+    box-shadow+        : @h @v @blur @color;
+  }
+  .box-shadow(@color,@h,@v,@blur,@spread){
+    -webkit-box-shadow+: @h @v @blur @spread @color;
+    box-shadow+        : @h @v @blur @spread @color;
   }
 
-  .transition-delay(@time: .5s){
-    -webkit-transition-delay: @delay; /* Safari and Chrome */
-    -moz-transition-delay: @delay; /* Firefox 4 */  
-    -o-transition-delay: @delay; /* Opera */    
-    transition-delay: @delay;
-  }
-
-  // user select
-  .user-select(@select:none) {
-    -webkit-user-select: @select;
-    -moz-user-select: @select;
-    -ms-user-select: @select;
-    -o-user-select: @select;
-    user-select: @select;
-  }
-
-  .perspective(@num:1000px){
-    -webkit-perspective : @num;
-    -moz-perspective    : @num;
-    -o-perspective      : @num;
-    -ms-perspective     : @num;
-    perspective         : @num;
-  }
-
-  .perspective-origin(@x: 50%, @y: 50%){
-    -webkit-perspective-origin  : @x @y;
-    -moz-perspective-origin     : @x @y;
-    -moz-transform-origin       : @x @y;
-    -o-perspective-origin       : @x @y;
-    -ms-perspective-origin      : @x @y;
-    perspective-origin          : @x @y;
+  // text-shadow
+  // ---------------------------
+  .text-shadow(@color:#777,@h:1px,@v:1px,@blur:2px){
+    text-shadow+: @h @v @blur @color;
   }
 
 }

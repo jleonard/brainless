@@ -1,0 +1,120 @@
+@import "../less/mixins/box.less";
+@import "../less/mixins/css3.less";
+@import "../less/mixins/position.less";
+@import "../less/mixins/reset.less";
+@import "../less/mixins/text.less";
+@import "../less/mixins/transform.less";
+@import "../less/mixins/transition.less";
+@import "../less/mixins/util.less";
+@import "../less/mixins/center.less";
+
+@import "../less/animation/rotate.less";
+@import "../less/animation/wiggle.less";
+@import "../less/animation/pulse.less";
+@import "../less/mixins/animation.less";
+
+
+/*
+* #box tests
+*/
+
+/* testing #box > .padding() */
+.box.padding{
+  #box > .padding(2px);
+  &.three{
+    #box > .padding(2px,6px,8px);
+  }
+  &.four{
+    #box > .padding(1px,2px,3px,4px);
+  }
+  &.short{
+    #box > .padding(1px 2px 3px 4px);
+  }
+}
+
+/* testing #box > margin() */
+.box.margin{
+  #box > .margin(2px);
+  &.three{
+    #box > .margin(2px,6px,8px);
+  }
+  &.four{
+    #box > .margin(1px,2px,3px,4px);
+  }
+  &.short{
+    #box > .margin(1px 2px 3px 4px);
+  }
+}
+
+/* testing #box sizing mixins */
+.box.sizing{
+  #box > .square(2px);
+  &.size{
+    #box > .size(10px,20px);
+  }
+  &.sizing{
+    #box > .sizing();
+  }
+  &.rect{
+    #box > .rect(30px,40px);
+  }
+}
+
+.box.margin-pad{
+  #box > .margin();
+  #box > .padding(2px);
+}
+
+/*
+* #css3 tests
+*/
+.css3.border-radius{
+  #css3 > .border-radius(20px);
+  &.two{
+    #css3 > .border-radius(20px,30px);
+  }
+  &.four{
+    #css3 > .border-radius(10px,20px,30px,40px);
+  }
+}
+
+.css3.box-shadow{
+  #css3 > .box-shadow(#c30,2px,3px);
+  &.blur{
+    #css3 > .box-shadow(#f90,2px,3px,4px);
+  }
+  &.blur.spread{
+    #css3 > .box-shadow(#f90,2px,3px,4px,5px);
+  }
+}
+
+.css3.text-shadow{
+  #css3 > .text-shadow(#000);
+}
+
+.transform.compound{
+  #transform > .translate(50%,50%);
+  #transform > .scale(0.5,0.5);
+  &.alt{
+    #transform > .translateX(-80%);
+  }
+}
+
+.center{
+  #center > .x();
+  #center > .y();
+}
+
+.pulse{
+  #animation > ._(pulse,3s);
+  #animation > .direction();
+}
+
+.wiggle{
+  #animation > ._(wiggle,0.05s);
+  #animation > .loop();
+}
+.rotate{
+  #animation > ._(rotate,5s);
+  #animation > .loop();
+}

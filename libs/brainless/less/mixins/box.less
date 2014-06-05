@@ -1,0 +1,54 @@
+#box{
+
+	// margin
+  // ---------------------------
+  .margin(@val:0){
+  	margin: @val;
+  }
+  .margin(@tb,@lr){
+  	margin: @tb @lr;
+  }
+  .margin(@t,@lr,@b){
+  	margin: @t @lr @b;
+  }
+  .margin(@t,@r,@b,@l){
+  	margin: @t @r @b @l;
+  }
+
+	// padding
+  // ---------------------------
+  .padding(@val:0){
+  	padding: @val;
+  }
+  .padding(@tb,@lr){
+  	padding: @tb @lr;
+  }
+  .padding(@t,@lr,@b){
+  	padding: @t @lr @b;
+  }
+  .padding(@t,@r,@b,@l){
+  	padding: @t @r @b @l;
+  }
+
+  // box-sizing: hardly necessary these days
+  // ---------------------------
+  .sizing(@val:border-box){
+    -webkit-box-sizing: @val;
+    -moz-box-sizing: @val;
+    box-sizing: @val;        
+  }
+
+	// sizing conveniences
+  // ---------------------------
+  .rect(@width:100px, @height:100px){
+    .size(@width,@height);
+  }
+  .size(@width:100px, @height:100px) {
+    width: @width;
+    height: @height;
+  }
+  .square(@size:100px) {
+    .size(@size, @size);
+  }
+  
+}
