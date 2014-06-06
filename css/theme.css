@@ -21,7 +21,8 @@
 .html .hljs-doctype,
 .css .hljs-id,
 .css .hljs-class,
-.css .hljs-pseudo {
+.css .hljs-pseudo,
+.less .hljs-pseudo {
   color: #cc6666;
 }
 
@@ -38,7 +39,8 @@
 
 /* Tomorrow Yellow */
 .ruby .hljs-class .hljs-title,
-.css .hljs-rules .hljs-attribute {
+.css .hljs-rules .hljs-attribute,
+.less .hljs-rules .hljs-attribute {
   color: #f0c674;
 }
 

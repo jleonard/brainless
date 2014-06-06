@@ -27,6 +27,8 @@
 @gray:   #aaa;
 @black:  #111;
 
+@pink: #f35;
+
 @baseUnit: 16px;
 
 @serif          : "Georgia",serif;
@@ -45,25 +47,58 @@ body{
   margin: 0;
   height: 100%;
   color: @black;
-  border-top: 21px solid #f55;
+  //border-top: 21px solid #f90;
+}
+
+aside{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: @pink;
+  color: @white;
+  width: @baseUnit * 15;
+  height: 100%;
+  padding: @baseUnit * 4;
+  font-family: sans-serif;
+  dl{
+    margin: 0;
+  }
+  dd{
+    font-weight: normal;
+    margin: 8px;
+  }
+  dt{
+    font-weight: bold;
+    margin-top: 30px;
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+}
+
+main{
+  margin-left: @baseUnit * 20;
+  padding-right: @baseUnit *2;
 }
 
 header{
-  text-align: center;
-  background-color: #f35;
-  color: #fff;
+  //text-align: center;
+  color: @black;
   height: 100%;
   padding: @baseUnit * 2;
+  padding-left: 0;
   font-family: @serif;
   h1{
-    font-size: 7em;
+    font-size: 4em;
     font-weight: normal;
     margin-bottom: 0;
+    color: @pink;
   }
   h2{
-    font-size: 2em;
+    font-size: 1em;
     font-weight: normal;
-    color: #fff;
+    color: #777;
+
   }
 }
 
