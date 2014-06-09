@@ -1,4 +1,5 @@
 @import 'includes/normalize.less';
+@import '../libs/brainless/less/brainless.less';
 
 //@import url(http://fonts.googleapis.com/css?family=Codystar);
 @import 'theme.css';
@@ -50,6 +51,10 @@ body{
   //border-top: 21px solid #f90;
 }
 
+a{
+  text-decoration: none;
+}
+
 aside{
   position: fixed;
   top: 0;
@@ -66,6 +71,9 @@ aside{
   dd{
     font-weight: normal;
     margin: 8px;
+    a{
+      color: #fff;
+    }
   }
   dt{
     font-weight: bold;
@@ -73,6 +81,7 @@ aside{
     &:first-child{
       margin-top: 0;
     }
+
   }
 }
 
@@ -102,8 +111,46 @@ header{
   }
 }
 
-pre{
+pre,.example{
   border: 2px solid #f1f1f1;
   background-color: #f4f4f4;
   border-radius: @baseUnit / 2;
+}
+
+pre.less{
+  color: #a2a2a2;
+ // color: @teal;
+  .comment{
+    color: #a2a2a2;
+  }
+  .mixin{
+    color: @pink;
+  }
+  .element{
+    color: darken(#a2a2a2,20%);
+  }
+  .attribute{
+    //color: @orange;
+  }
+}
+
+/*
+ * examples
+ */
+div.example{
+  #box > .padding(20px);
+}
+div.example .container{
+  border: 2px solid @pink;
+  padding: 10px;
+}
+div.example .box{
+ #box > .size(160px,100px);
+ background-color: @pink;
+}
+
+div.example.transform{
+  .box{
+    #absolute > .top-left();
+  }
 }

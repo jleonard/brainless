@@ -18,41 +18,160 @@
 
       <aside>
         <dl>
-          <dt>Section</dt>
-            <dd>Item 1</dd>
-          <dt>Section 2</dt>
-            <dd>Item 2</dd>
+          <dt>Examples</dt>
+            <dd><a href='#typography'>typography</a></dd>
+            <dd><a href='#positioning'>positioning</a></dd>
+            <dd><a href='#transforms'>transforms</a></dd>
+            <dd><a href='#centering'>centering</a></dd>
+            <dd><a href='#animation'>animations</a></dd>
         </dl>
       </aside>
 
       <main>
         <header>
           <h1>brain.less</h1>
-          <h2>A .less framework to simplify your .css development.</h2>
+          <h2>A .less framework to simplify .css development.</h2>
         </header>
         <section>
-          <h2>Overview</h2>
-          <h3>What this is</h3>
-          <h3>What this isn't</h3>
+          <h1>Examples</h1>
         </section>
+
         <section>
-          <h2>#animation</h2>
-          <h3>Keyframe animation.</h3>
+          <a name='typography' />
+          <h2>1. typography control with <a href='https://github.com/jleonard/brainless/blob/master/less/mixins/text.less' target='_blank'>text.less</a></h2>
 <pre class='less'>
   <code>
-    /* #animation > ._(@keyframes,) */
-    div{
-      #animation > ._(rotate,1s);
-      #animation > .loop();
-      &:hover{
-        #animation > .pause();
-      }
+    p{
+      #text > .bold();
+      #text > .uppercase();
+      #text > .underline();
+    }
+  </code>
+  <code>
+    /* css output */
+    p{
+      font-weight: bold;
+      text-transform: uppercase:
+      text-decoration: underline;
     }
   </code>
 </pre>
         </section>
+
+        <section>
+          <a name='positioning' />
+          <h2>2. element positioning with <a href='https://github.com/jleonard/brainless/blob/master/less/mixins/position.less' target='_blank'>position.less</a></h2>
+          <blockquote>Use the <em>#absolute</em>, <em>#relative</em> and <em>#fixed</em> groups to control element positioning.</blockquote>
+<pre class='less'>
+  <code>
+    /* less */
+    div{
+      #absolute > .top-left(25px,50px);
+    }
+  </code>
+  <code>
+    /* css output */
+    div{
+      position: absolute;
+      top: 25px;
+      left: 50px;
+    }
+  </code>
+</pre>
+        </section>
+
+        <section>
+          <a name='transforms' />
+          <h2>3. css transform management with <a href='https://github.com/jleonard/brainless/blob/master/less/mixins/transform.less' target='_blank'>transform.less</a></h2>
+          <h4>Example</h4>
+          <div class='example transform'>
+            <div class='container'>
+              <div class='box'></div>
+            </div>
+          </div>
+          <h4>Code</h4>
+  <pre class='less'>
+  <code>
+    /* 
+     * less
+     * The mixins allow you to chain your transforms together. 
+     */
+    div{
+      #transform > .scaleX(25%);
+      #transform > .rotateY(50%);
+    }
+  </code>
+  <code>
+    /* css output */
+    div{
+      -webkit-transform : scaleX(25%) rotateY(50%);
+      -moz-transform    : scaleX(25%) rotateY(50%);
+      -o-transform      : scaleX(25%) rotateY(50%);
+      -ms-transform     : scaleX(25%) rotateY(50%);
+      transform         : scaleX(25%) rotateY(50%);
+    }
+  </code>
+</pre>
+        </section>
+
+        <section>
+          <a name='centering' />
+          <h2>4. centering with <a href='https://github.com/jleonard/brainless/blob/master/less/mixins/center.less' target='_blank'>center.less</a></h2>
+<pre class='less'>
+  <code>
+    div{
+      #center > .x();
+    }
+  </code>
+  <code>
+    /* css output */
+    div{
+      position          : absolute;
+      left              : 50%;
+      -webkit-transform : translateX(-50%);
+      -moz-transform    : translateX(-50%);
+      -o-transform      : translateX(-50%);
+      -ms-transform     : translateX(-50%);
+      transform         : translateX(-50%);
+    }
+  </code>
+</pre>
+        </section>
+
+
+        <section>
+          <a name='animation' />
+          <h2>5. css keyframe animation control with <a href='https://github.com/jleonard/brainless/blob/master/less/mixins/animation.less' target='_blank'>animation.less</a></h2>
+<pre class='less'>
+  <code>
+    div{
+      #animation > .name(rotate);
+      #animation > .duration(4s);
+      #animation > .loop();
+    }
+  </code>
+  <code>
+    /* css output */
+    div{
+      animation-name: rotate;
+      -webkit-animation-name: rotate;
+
+      animation-duration: 4s;
+      -webkit-duration: 4s;
+
+      animation-direction: alternate;
+      -webkit-animation-direction: alternate;
+
+      animation-iteration-count: infinite;
+      -webkit-iteration-count: infinite;
+    }
+  </code>
+</pre>
+        </section>
+
         <footer>
         </footer>
+
       </main>
       <script src="http://code.jquery.com/jquery.min.js"></script>
       <script src="js/hiless.js"></script>
