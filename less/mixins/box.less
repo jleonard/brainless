@@ -30,6 +30,23 @@
   	padding: @t @r @b @l;
   }
 
+  // min and max width
+  // ---------------------------
+  .max(@val:0px){
+    max-width: @val;
+  }
+  .max(@w,@h){
+    max-width: @w;
+    max-height: @h;
+  }
+  .min(@val:0px){
+    min-width: @val;
+  }
+  .min(@w,@h){
+    min-width: @w;
+    min-height: @h;
+  }
+
   // box-sizing: hardly necessary these days
   // ---------------------------
   .sizing(@val:border-box){
