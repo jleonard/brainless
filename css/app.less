@@ -37,6 +37,16 @@
 @serif          : "Georgia",serif;
 @sans           : 'Lato', sans-serif;
 
+@-webkit-keyframes wiggle {
+  0% {-webkit-transform:rotate(1deg); transform:rotate(1deg);}
+  100% {-webkit-transform:rotate(-1deg); transform:rotate(-1deg);}
+}
+
+@keyframes wiggle {
+  0% {-webkit-transform:rotate(1deg); transform:rotate(1deg);}
+  100% {-webkit-transform:rotate(-1deg); transform:rotate(-1deg);}
+}
+
 
 // scaffolding
 //------------------------------------
@@ -197,4 +207,10 @@ div.example.centering{
     #center > .y();
     #center > .x();
   }
+}
+
+div.example.animation .box{
+  #animation > .name(wiggle);
+  #animation > .duration(0.25s);
+  #animation > .loop();
 }

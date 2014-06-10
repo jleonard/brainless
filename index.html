@@ -164,19 +164,23 @@
 <pre class='less'>
   <code>
     div{
-      #animation > .name(rotate);
-      #animation > .duration(4s);
+      #animation > .name(wiggle);
+      #animation > .duration(0.25s);
       #animation > .loop();
     }
   </code>
   <code>
+    @keyframes wiggle {
+      0% {transform:rotate(1deg);}
+      100% {transform:rotate(-1deg);}
+    }
     /* css output */
     div{
-      animation-name: rotate;
-      -webkit-animation-name: rotate;
+      animation-name: wiggle;
+      -webkit-animation-name: wiggle;
 
-      animation-duration: 4s;
-      -webkit-duration: 4s;
+      animation-duration: 0.25s;
+      -webkit-duration: 0.25s;
 
       animation-direction: alternate;
       -webkit-animation-direction: alternate;
@@ -185,7 +189,12 @@
       -webkit-iteration-count: infinite;
     }
   </code>
-</pre>
+</pre>  
+        <h4>Example</h4>
+        <div class='example animation'>
+          <div class='box'>
+          </div>
+        </div>
         </section>
 
         <footer>
