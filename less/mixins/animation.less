@@ -19,7 +19,7 @@
 
   .duration(@val:1s){
     animation-duration: @val;
-    -webkit-duration: @val;
+    -webkit-animation-duration: @val;
   }
 
   .fill-mode(@val:none){
@@ -28,8 +28,8 @@
   }
 
   .iteration-count(@val:infinite){
-    animation-timing-function: @val;
-    -webkit-animation-timing-function: @val;
+    animation-iteration-count: @val;
+    -webkit-iteraction-count: @val;
   }
 
   .name(@val){
@@ -43,7 +43,8 @@
   }
 
   .timing-function(@val:linear){
-    .iteration-count(@val);
+    animation-timing-function: @val;
+    -webkit-timing-function: @val;
   }
 
   // shorthand conveniences
@@ -54,7 +55,7 @@
 
   .loop(){
     .direction();
-    .iteration-count();
+    .repeat();
   }
 
   .pause(){
