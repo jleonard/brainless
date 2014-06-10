@@ -31,13 +31,14 @@
         <header>
           <h1>brain.less</h1>
           <h2>A .less framework to simplify .css development.</h2>
+          <div><a class='action' href='https://github.com/jleonard/brainless' target='_blank'>view on github</a></div>
         </header>
         <section>
           <h1>Examples</h1>
         </section>
 
         <section>
-          <a name='typography' />
+          <a name='typography'></a>
           <h2>1. typography control with <a href='https://github.com/jleonard/brainless/blob/master/less/mixins/text.less' target='_blank'>text.less</a></h2>
 <pre class='less'>
   <code>
@@ -56,40 +57,43 @@
     }
   </code>
 </pre>
+        <h4>Example</h4>
+        <div class='example typography'>
+          <p>Hi there. I'm bold, uppercased and underlined...and it looks terrible.</p>
+        </div>
         </section>
 
         <section>
-          <a name='positioning' />
+          <a name='positioning'></a>
           <h2>2. element positioning with <a href='https://github.com/jleonard/brainless/blob/master/less/mixins/position.less' target='_blank'>position.less</a></h2>
           <blockquote>Use the <em>#absolute</em>, <em>#relative</em> and <em>#fixed</em> groups to control element positioning.</blockquote>
 <pre class='less'>
   <code>
     /* less */
     div{
-      #absolute > .top-left(25px,50px);
+      #absolute > .bottom-right(10px,15px);
     }
   </code>
   <code>
     /* css output */
     div{
       position: absolute;
-      top: 25px;
-      left: 50px;
+      bottom: 10px;
+      right: 15px;
     }
   </code>
 </pre>
+        <h4>Example</h4>
+        <div class='example positioning'>
+          <div class='container'>
+            <div class='box'>
+            </div>
+        </div>
         </section>
 
         <section>
-          <a name='transforms' />
+          <a name='transforms'></a>
           <h2>3. css transform management with <a href='https://github.com/jleonard/brainless/blob/master/less/mixins/transform.less' target='_blank'>transform.less</a></h2>
-          <h4>Example</h4>
-          <div class='example transform'>
-            <div class='container'>
-              <div class='box'></div>
-            </div>
-          </div>
-          <h4>Code</h4>
   <pre class='less'>
   <code>
     /* 
@@ -97,50 +101,65 @@
      * The mixins allow you to chain your transforms together. 
      */
     div{
-      #transform > .scaleX(25%);
-      #transform > .rotateY(50%);
+      #transform > .rotateX(45deg);
+      #transform > .skew(30deg,25deg);
     }
   </code>
   <code>
     /* css output */
     div{
-      -webkit-transform : scaleX(25%) rotateY(50%);
-      -moz-transform    : scaleX(25%) rotateY(50%);
-      -o-transform      : scaleX(25%) rotateY(50%);
-      -ms-transform     : scaleX(25%) rotateY(50%);
-      transform         : scaleX(25%) rotateY(50%);
+      -webkit-transform : rotateX(45deg) skew(30deg,25deg);
+      -moz-transform    : rotateX(45deg) skew(30deg,25deg);
+      -o-transform      : rotateX(45deg) skew(30deg,25deg);
+      -ms-transform     : rotateX(45deg) skew(30deg,25deg);
+      transform         : rotateX(45deg) skew(30deg,25deg);
     }
   </code>
 </pre>
+          <h4>Example</h4>
+          <div class='example transform'>
+            <div class='container'>
+              <div class='box'></div>
+            </div>
+          </div>
+
         </section>
 
         <section>
-          <a name='centering' />
+          <a name='centering'></a>
           <h2>4. centering with <a href='https://github.com/jleonard/brainless/blob/master/less/mixins/center.less' target='_blank'>center.less</a></h2>
 <pre class='less'>
   <code>
     div{
-      #center > .x();
+      position: absolute;
+      #center > .y();
     }
   </code>
   <code>
     /* css output */
     div{
       position          : absolute;
-      left              : 50%;
-      -webkit-transform : translateX(-50%);
-      -moz-transform    : translateX(-50%);
-      -o-transform      : translateX(-50%);
-      -ms-transform     : translateX(-50%);
-      transform         : translateX(-50%);
+      top               : 50%;
+      -webkit-transform : translateY(-50%);
+      -moz-transform    : translateY(-50%);
+      -o-transform      : translateY(-50%);
+      -ms-transform     : translateY(-50%);
+      transform         : translateY(-50%);
     }
   </code>
 </pre>
+        <h4>Example</h4>
+        <div class='example centering'>
+          <div class='container'>
+            <div class='box'>
+            </div>
+        </div>
+
         </section>
 
 
         <section>
-          <a name='animation' />
+          <a name='animation'></a>
           <h2>5. css keyframe animation control with <a href='https://github.com/jleonard/brainless/blob/master/less/mixins/animation.less' target='_blank'>animation.less</a></h2>
 <pre class='less'>
   <code>

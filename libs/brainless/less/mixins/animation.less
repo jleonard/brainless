@@ -28,8 +28,8 @@
   }
 
   .iteration-count(@val:infinite){
-    animation-iteration-count: @val;
-    -webkit-iteration-count: @val;
+    animation-timing-function: @val;
+    -webkit-animation-timing-function: @val;
   }
 
   .name(@val){
@@ -43,8 +43,7 @@
   }
 
   .timing-function(@val:linear){
-    animation-timing-function: @val;
-    -webkit-animation-timing-function: @val;
+    .iteration-count(@val);
   }
 
   // shorthand conveniences

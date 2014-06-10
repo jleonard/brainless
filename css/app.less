@@ -1,7 +1,8 @@
 @import 'includes/normalize.less';
 @import '../libs/brainless/less/brainless.less';
 
-//@import url(http://fonts.googleapis.com/css?family=Codystar);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+
 @import 'theme.css';
 
 @aqua:  #7FDBFF;
@@ -29,10 +30,12 @@
 @black:  #111;
 
 @pink: #f35;
+@link : rgb(179,212,253);
 
 @baseUnit: 16px;
 
 @serif          : "Georgia",serif;
+@sans           : 'Lato', sans-serif;
 
 
 // scaffolding
@@ -48,11 +51,25 @@ body{
   margin: 0;
   height: 100%;
   color: @black;
-  //border-top: 21px solid #f90;
+  font-family: @sans;
 }
 
 a{
   text-decoration: none;
+  color: @link;
+  &:hover{
+    color: darken(@link,20%);
+  }
+  &.action{
+    display: inline-block;
+    padding: 10px;
+    color: @pink;
+    border: 2px solid @pink;
+    &:hover{
+      background-color: @pink;
+      color: #fff;
+    }
+  }
 }
 
 aside{
@@ -91,28 +108,31 @@ main{
 }
 
 header{
-  //text-align: center;
+  text-align: center;
+  border-bottom: 4px solid @pink;
   color: @black;
   height: 100%;
   padding: @baseUnit * 2;
   padding-left: 0;
-  font-family: @serif;
   h1{
     font-size: 4em;
     font-weight: normal;
     margin-bottom: 0;
     color: @pink;
+    font-weight: bold;
   }
   h2{
     font-size: 1em;
     font-weight: normal;
     color: #777;
+    font-weight: 300;
 
   }
 }
 
 pre,.example{
   border: 2px solid #f1f1f1;
+  border-left-width: 10px;
   background-color: #f4f4f4;
   border-radius: @baseUnit / 2;
 }
@@ -139,18 +159,42 @@ pre.less{
  */
 div.example{
   #box > .padding(20px);
+  background-color: transparent;
 }
 div.example .container{
   border: 2px solid @pink;
   padding: 10px;
+  position: relative;
+  min-height: 200px;
 }
 div.example .box{
  #box > .size(160px,100px);
  background-color: @pink;
 }
 
+div.example.positioning{
+  .box{
+    #absolute > .bottom-right(10px,15px);
+  }
+}
+
+div.example.typography p{
+  #text > .bold();
+  #text > .uppercase();
+  #text > .underline();
+}
+
 div.example.transform{
   .box{
-    #absolute > .top-left();
+    #transform > .rotateX(45deg);
+    #transform > .skew(30deg,25deg);
+  }
+}
+
+div.example.centering{
+  .box{
+    position: absolute;
+    #center > .y();
+    #center > .x();
   }
 }

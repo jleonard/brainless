@@ -1,7 +1,28 @@
 #transition{
-  .-(@property:all, @duration:1s, linear, 0s){
+  ._(@property:all, @duration:1s, linear, 0s){
     -moz-transition+ : @property @duration @timing @delay;
     -webkit-transition+ : @property @duration @timing @delay;
     transition+ : @property @duration @timing @delay;
+  }
+  .delay(@num:0s){
+  	-webkit-transition-delay: @num;
+  	transition-delay: @num;
+  }
+  .duration(@num:0s){
+  	-webkit-transition-duration: @num;
+  	transition-duration: @num;
+  }
+  .property(@val:all){
+  	-webkit-transition-property: @val;
+  	transition-property: @val;
+  }
+  .timing-function(@val:linear){
+  	-webkit-transition-timing-function: @val;
+  	transition-timing-function: @val;
+  }
+  // shorthand conveniences
+  // ---------------------------
+  .easing(@val:linear){
+    .timing-function(@val);
   }
 }
