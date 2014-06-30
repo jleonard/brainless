@@ -2,7 +2,7 @@
   "name": "brainless",
   "description": "A collection of .less utilities and conveniences",
   "author": "John Leonard <thejohnleonard@gmail.com>",
-  "version": "3.0.0",
+  "version": "3.0.7",
   "main": "brainless.less",
   "repository": {
     "type": "git",
