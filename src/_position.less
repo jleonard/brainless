@@ -1,0 +1,142 @@
+// positioning conveniences
+// ---------------------------
+
+#absolute{
+  .pos(){
+    position:absolute;
+  }
+  .top( @y: 0px ){
+    .pos();
+    top: @y;
+  }
+  .left( @x: 0px ){
+    .pos();
+    left: @x;
+  }
+  .bottom-left( @y:0px,@x:0px ){
+    .pos();
+    bottom: @y;
+    left: @x;
+  }
+  .bottom-right( @y:0px, @x:0px ){
+    .pos();
+    bottom: @y;
+    right: @x;
+  }
+  .top-left( @y:0px, @x:0px ){
+    .pos();
+    top: @y;
+    left: @x;
+  }
+  .top-right( @y:0px, @x:0px ){
+    .pos();
+    top: @y;
+    right: @x;
+  }
+}
+
+#fixed{
+  .pos(){
+    position:fixed;
+  }
+  .top( @y: 0px ){
+    .pos();
+    top: @y;
+  }
+  .left( @x: 0px ){
+    .pos();
+    left: @x;
+  }
+  .bottom-left( @y:0px,@x:0px ){
+    .pos();
+    bottom: @y;
+    left: @x;
+  }
+  .bottom-right( @y:0px, @x:0px ){
+    .pos();
+    bottom: @y;
+    right: @x;
+  }
+  .top-left( @y:0px, @x:0px ){
+    .pos();
+    top: @y;
+    left: @x;
+  }
+  .top-right( @y:0px, @x:0px ){
+    .pos();
+    top: @y;
+    right: @x;
+  }
+}
+
+#relative{
+  .pos(){
+    position:relative;
+  }
+  .top( @y: 0px ){
+    .pos();
+    top: @y;
+  }
+  .left( @x: 0px ){
+    .pos();
+    left: @x;
+  }
+  .bottom-left( @y:0px,@x:0px ){
+    .pos();
+    bottom: @y;
+    left: @x;
+  }
+  .bottom-right( @y:0px, @x:0px ){
+    .pos();
+    bottom: @y;
+    right: @x;
+  }
+  .top-left( @y:0px, @x:0px ){
+    .pos();
+    top: @y;
+    left: @x;
+  }
+  .top-right( @y:0px, @x:0px ){
+    .pos();
+    top: @y;
+    right: @x;
+  }
+}
+
+#sticky{
+  .pos(){
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+  }
+  .top( @y: 0px ){
+    .pos();
+    top:  @y;
+  }
+  .left( @x: 0px ){
+    .pos();
+    left: @x;
+  }
+  .bottom-left( @y:0px,@x:0px ){
+    .pos();
+    bottom: @y;
+    left: @x;
+  }
+  .bottom-right( @y:0px, @x:0px ){
+    .pos();
+    bottom: @y;
+    right: @x;
+  }
+  .top-left( @y:0px, @x:0px ){
+    .pos();
+    top: @y;
+    left: @x;
+  }
+  .top-right( @y:0px, @x:0px ){
+    .pos();
+    top: @y;
+    right: @x;
+  }
+}

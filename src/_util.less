@@ -1,0 +1,27 @@
+#util{
+
+// basic clearfix
+// ---------------------------
+  .clearfix() {
+    &:before,
+    &:after {
+      content: " ";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+  }
+
+// sizing conveniences
+// ---------------------------
+  .size(@width:100px, @height:100px) {
+    width: @width;
+    height: @height;
+  }
+
+  .square(@size:100px) {
+    .size(@size, @size);
+  }
+  
+}

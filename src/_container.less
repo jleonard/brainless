@@ -1,0 +1,63 @@
+#container{
+
+  // horizontal box
+  // ---------------------------
+  .hBox(@margin:0.75rem){
+    #flexbox > .hBox(@margin);
+  }
+
+  // vertical box
+  // ---------------------------
+  .vBox(@margin:0.75rem){
+    #flexbox > .vBox(@margin);
+  }
+  
+  // horizontal alignment conveniences
+  // ----------------------------------
+  .horizontalAlign(flex-start){
+    justify-content: flex-start;
+  }
+
+  .horizontalAlign(flex-end){
+    justify-content: flex-end;
+  }
+
+  .horizontalAlign(left){
+    justify-content: flex-start;
+  }
+
+  .horizontalAlign(right){
+    justify-content: flex-end;
+  }
+
+  .horizontalAlign(center){
+    justify-content: center;
+  }
+  
+  // vertical alignment conveniences
+  // ----------------------------------
+  .verticalAlign(flex-end){
+    align-content: flex-end;
+  }
+
+  .verticalAlign(flex-start){
+    align-content: flex-start;
+  }
+
+  .verticalAlign(center){
+    align-content: center;
+  }
+
+  .verticalAlign(stretch){
+    align-content: stretch;
+  }
+
+  .verticalAlign(bottom){
+    align-content: flex-end;
+  }
+
+  .verticalAlign(top){
+    align-content: flex-start;
+  }
+
+}

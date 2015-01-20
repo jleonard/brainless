@@ -1,0 +1,97 @@
+#animation {
+
+  ._(@name,@duration:0.15s,@repeat:infinite,@easing:linear){
+    -webkit-animation : @name @duration @repeat @easing;
+       -moz-animation : @name @duration @repeat @easing;
+         -o-animation : @name @duration @repeat @easing;
+        -ms-animation : @name @duration @repeat @easing;
+            animation : @name @duration @repeat @easing;
+  }
+
+// animation delay
+// https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay
+// --------------------------
+  .delay(@val:0s){
+    -webkit-animation-delay : @val;
+            animation-delay : @val;
+  }
+
+// animation direction
+// play the animation forward, reverse or alternate
+// https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction
+// --------------------------
+  .direction(@val:alternate){
+    -webkit-animation-direction : @val;
+            animation-direction : @val;
+  }
+
+// animation duration
+// https://developer.mozilla.org/en-US/docs/Web/CSS/animation-duration
+// --------------------------
+  .duration(@val:1s){
+    -webkit-animation-duration : @val;
+            animation-duration : @val;
+  }
+
+  .fillMode(@val:none){
+    -webkit-animation-fill-mode : @val;
+            animation-fill-mode : @val;
+  }
+
+// animation iteration count
+// number of times to play the animation
+// https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count
+// --------------------------
+  .iterationCount(@val:infinite){
+    -webkit-animation-iteration-count : @val;
+           animation-iteraction-count : @val;
+  }
+
+  .name(@val){
+    -webkit-animation-name+ : @val;
+            animation-name+ : @val;
+  }
+
+  .playState(@val:running){
+    -webkit-animation-play-state : @val;
+            animation-play-state : @val;
+  }
+
+// animation timing function (easing)
+// https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function
+// --------------------------
+  .timingFunction(@val:linear){
+    -webkit-animation-timing-function : @val;
+            animation-timing-function : @val;
+  }
+
+// shorthand conveniences
+// --------------------------
+  .easing(@val:linear){
+    .timing-function(@val);
+  }
+
+  .keyframes(@val){
+    .name(@val);
+  }
+
+// loop an animation in an infinite forward/reverse cycle
+// --------------------------
+  .loop(){
+    .direction();
+    .repeat();
+  }
+
+  .pause(){
+    .playState(paused);
+  }
+
+  .play(){
+    .playState(running);
+  }
+
+  .repeat(@val:infinite){
+    .iterationCount(@val);
+  }
+
+}
