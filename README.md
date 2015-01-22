@@ -1,7 +1,10 @@
 # Brainless
 ##A collection of .less utilities and conveniences.
 
-> Brainless provides you with a number of grouped mixins to assist with rapid .css development. 
+> Brainless provides you with a number of grouped mixins to accelerate rapid .css development.  
+
+### Design philosophy  
+This is not intended to be a catch-call framework for css development. Instead there are 9 [namespaced](http://lesscss.org/features/#features-overview-feature-namespaces-and-accessors) mixin collections that provide basic conveniences.
 
 ### The mixins are organized into 9 groups  
 * **_animation.less** shorthands for managing keyframe animations  
