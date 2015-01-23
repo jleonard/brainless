@@ -28,7 +28,7 @@ bower install brainless
 
 2. Import into your .less file
 ```less
-@import 'bower_components/brainless/src/brainless.less'
+@import (less) 'bower_components/brainless/src/brainless.less'
 ```
 
 ###Animation  
