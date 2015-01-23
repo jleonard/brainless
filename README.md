@@ -18,7 +18,7 @@ This is not intended to be a catch-call framework for css development. Instead t
 * **#reset** *_reset.less* quickly set a css property back to its default value.  
 * **_transform.less** conveniences to manage complex css transforms  
 * **_transition.less** conveniences to manage css transitions  
-* **_util.less** common css utility mixins for element sizing and clearfixing  
+* **#util** *_util.less* common css utility mixins for element sizing and clearfixing  
 
 ###Animation  
 
@@ -77,6 +77,7 @@ This is not intended to be a catch-call framework for css development. Instead t
   .box{
     #absolute > .top-left();
   }
+
   // css output
   .box{ 
     position: absolute; 
@@ -87,6 +88,7 @@ This is not intended to be a catch-call framework for css development. Instead t
   .box{
     #absolute > .top-left(50%,50%);
   }
+
   // css output
   .box{ 
     position: absolute; 
@@ -97,6 +99,7 @@ This is not intended to be a catch-call framework for css development. Instead t
   .box{
     #fixed > .top(20px);
   }
+
   // css output
   .box{
     position: fixed;
@@ -117,6 +120,7 @@ This is not intended to be a catch-call framework for css development. Instead t
   #reset > ._(left);
   #absolute > .bottom-right();
 }
+
 // css output
 .box{
   position: absolute;
@@ -128,5 +132,35 @@ This is not intended to be a catch-call framework for css development. Instead t
   left: auto;
   bottom: 0;
   right: 0;
+}
+```  
+
+###Util  
+**Examples**  
+```less
+// classic clearfix
+.box{
+  #util > .clearfix();
+}
+
+// sizing convenience
+.size{
+  #util > .size(200px,120px);
+}
+
+//css output
+.size{
+  width: 200px;
+  height: 120px;
+}
+
+.square{
+  #util > .square(200px);
+}
+
+//css output
+.square{
+  width: 200px;
+  height: 200px;
 }
 ```
