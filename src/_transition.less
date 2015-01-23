@@ -13,32 +13,32 @@
 // https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay
 // ---------------------------
   .delay(@num:0s){
-    -webkit-transition-delay : @num;
-            transition-delay : @num;
+    -webkit-transition-delay+ : @num;
+            transition-delay+ : @num;
   }
 
 // transition duration
 // https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration
 // ---------------------------
   .duration(@num:0s){
-    -webkit-transition-duration : @num;
-            transition-duration : @num;
+    -webkit-transition-duration+ : @num;
+            transition-duration+ : @num;
   }
 
 // transition property (property to animate)
 // https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property
 // ---------------------------
   .property(@val:all){
-    -webkit-transition-property : @val;
-            transition-property : @val;
+    -webkit-transition-property+ : @val;
+            transition-property+ : @val;
   }
 
 // transition timing function (easing)
 // https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing function
 // ---------------------------
   .timing-function(@val:linear){
-    -webkit-transition-timing-function : @val;
-            transition-timing-function : @val;
+    -webkit-transition-timing-function+ : @val;
+            transition-timing-function+ : @val;
   }
 
   // shorthand mixins
