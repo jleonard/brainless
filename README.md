@@ -21,12 +21,12 @@ This is not intended to be a catch-call framework for css development. Instead t
 * **[#util](#util)** *_util.less* common css utility mixins for element sizing and clearfixing 
 
 ## Usage
-1. Install via [bower](http://bower.io/)
+Install via [bower](http://bower.io/)
 ```bash
 bower install brainless
 ```
 
-2. Import into your .less file
+Import into your .less file
 ```less
 @import (less) 'bower_components/brainless/src/brainless.less'
 ```
