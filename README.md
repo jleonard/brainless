@@ -18,7 +18,18 @@ This is not intended to be a catch-call framework for css development. Instead t
 * **[#reset](#reset)** *_reset.less* quickly set a css property back to its default value.  
 * **#transform** *_transform.less* conveniences to manage complex css transforms  
 * **[#transition](#transition)** *_transition.less* conveniences to manage css transitions  
-* **[#util](#util)** *_util.less* common css utility mixins for element sizing and clearfixing  
+* **[#util](#util)** *_util.less* common css utility mixins for element sizing and clearfixing 
+
+## Usage
+1. Install via [bower](http://bower.io/)
+```bash
+bower install brainless
+```
+
+2. Import into your .less file
+```less
+@import 'bower_components/brainless/src/brainless.less'
+```
 
 ###Animation  
 
