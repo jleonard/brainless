@@ -1,0 +1,212 @@
+#transform{
+
+// backface visibility
+// https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility
+// --------------------------
+  .backface(@val:hidden){
+    -webkit-backface-visibility : @val;
+       -moz-backface-visibility : @val;
+            backface-visibility : @val;
+  }
+
+// transform style
+// https://developer.mozilla.org/en-US/docs/Web/CSS/transform-style
+// --------------------------
+  .style(@style:preserve-3d){
+    -webkit-transform-style : @style;
+       -moz-transform-style : @style;
+         -o-transform-style : @style;
+        -ms-transform-style : @style;
+            transform-style : @style;
+  }
+
+// transform origin
+// https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin
+// --------------------------
+  .origin(@x:50%,@y:0,@z:0){
+    -webkit-transform-origin : @x @y @z;
+       -moz-transform-origin : @x @y @z;
+         -o-transform-origin : @x @y @z;
+        -ms-transform-origin : @x @y @z;
+            transform-origin : @x @y @z;
+  }
+
+// perspective
+// https://developer.mozilla.org/en-US/docs/Web/CSS/perspective
+// --------------------------
+  .perspective(@num:1000px){
+    -webkit-perspective : @num;
+       -moz-perspective : @num;
+            perspective : @num;
+  }
+
+// perspective origin
+// https://developer.mozilla.org/en-US/docs/Web/CSS/perspective-origin
+// --------------------------
+  .perspective-origin(@x:50%,@y:50%){
+    -webkit-perspective-origin : @x @y;
+       -moz-perspective-origin : @x @y;
+            perspective-origin : @x @y;
+  }
+
+// rotate
+// --------------------------
+  .rotate(@angle){
+    -webkit-transform+_ : rotate(@angle);
+       -moz-transform+_ : rotate(@angle);
+         -o-transform+_ : rotate(@angle);
+        -ms-transform+_ : rotate(@angle);
+            transform+_ : rotate(@angle);
+  }
+
+// rotate x axis
+// --------------------------
+  .rotateX(@angle){
+    -webkit-transform+_ : rotateX(@angle);
+       -moz-transform+_ : rotateX(@angle);
+         -o-transform+_ : rotateX(@angle);
+        -ms-transform+_ : rotateX(@angle);
+            transform+_ : rotateX(@angle);
+  }
+
+// rotate y axis
+// --------------------------
+  .rotateY(@angle){
+    -webkit-transform+_ : rotateY(@angle);
+       -moz-transform+_ : rotateY(@angle);
+         -o-transform+_ : rotateY(@angle);
+        -ms-transform+_ : rotateY(@angle);
+            transform+_ : rotateY(@angle);
+  }
+
+// rotate z axis
+// --------------------------
+  .rotateZ(@angle){
+    -webkit-transform+_ : rotateZ(@angle);
+       -moz-transform+_ : rotateZ(@angle);
+         -o-transform+_ : rotateZ(@angle);
+        -ms-transform+_ : rotateZ(@angle);
+            transform+_ : rotateZ(@angle);
+  }
+
+// scale
+// --------------------------
+  .scale(@x, @y){
+    -webkit-transform+_ : scale(@x,@y);
+       -moz-transform+_ : scale(@x,@y);
+         -o-transform+_ : scale(@x,@y);
+        -ms-transform+_ : scale(@x,@y);
+            transform+_ : scale(@x,@y);
+  }
+
+// scale x
+// --------------------------
+  .scaleX(@val){
+    -webkit-transform+_ : scaleX(@val);
+       -moz-transform+_ : scaleX(@val);
+         -o-transform+_ : scaleX(@val);
+        -ms-transform+_ : scaleX(@val);
+            transform+_ : scaleX(@val);
+  }
+
+// scale y
+// --------------------------
+  .scaleY(@val){
+    -webkit-transform+_ : scaleY(@val);
+       -moz-transform+_ : scaleY(@val);
+         -o-transform+_ : scaleY(@val);
+        -ms-transform+_ : scaleY(@val);
+            transform+_ : scaleY(@val);
+  }
+
+// scale z
+// --------------------------
+  .scaleZ(@val){
+    -webkit-transform+_ : scaleZ(@val);
+       -moz-transform+_ : scaleZ(@val);
+         -o-transform+_ : scaleZ(@val);
+        -ms-transform+_ : scaleZ(@val);
+            transform+_ : scaleZ(@val);
+  }
+
+// skew
+// --------------------------
+  .skew(@x, @y){
+    -webkit-transform+_ : skew(@x,@y);
+       -moz-transform+_ : skew(@x,@y);
+         -o-transform+_ : skew(@x,@y);
+        -ms-transform+_ : skew(@x,@y);
+            transform+_ : skew(@x,@y);
+  }
+
+// skew x axis
+// --------------------------
+  .skewX(@val){
+    -webkit-transform+_ : skewX(@val);
+       -moz-transform+_ : skewX(@val);
+         -o-transform+_ : skewX(@val);
+        -ms-transform+_ : skewX(@val);
+            transform+_ : skewX(@val);
+  }
+
+// scale y axis
+// --------------------------
+  .skewY(@val){
+    -webkit-transform+_ : skewY(@val);
+       -moz-transform+_ : skewY(@val);
+         -o-transform+_ : skewY(@val);
+        -ms-transform+_ : scaleY(@val);
+            transform+_ : skewY(@val);
+  }
+
+// translate
+// --------------------------
+  .translate(@x, @y){
+    -webkit-transform+_ : translate(@x,@y);
+       -moz-transform+_ : translate(@x,@y);
+         -o-transform+_ : translate(@x,@y);
+        -ms-transform+_ : translate(@x,@y);
+            transform+_ : translate(@x,@y);
+  }
+
+// translate x axis
+// --------------------------
+  .translateX(@val){
+    -webkit-transform+_ : translateX(@val);
+       -moz-transform+_ : translateX(@val);
+         -o-transform+_ : translateX(@val);
+        -ms-transform+_ : translateX(@val);
+            transform+_ : translateX(@val);
+  }
+
+// translate y axis
+// --------------------------
+  .translateY(@val){
+    -webkit-transform+_ : translateY(@val);
+       -moz-transform+_ : translateY(@val);
+         -o-transform+_ : translateY(@val);
+        -ms-transform+_ : translateY(@val);
+            transform+_ : translateY(@val);
+  }
+
+// translate z axis
+// --------------------------
+  .translateZ(@val){
+    -webkit-transform+_ : translateZ(@val);
+       -moz-transform+_ : translateZ(@val);
+         -o-transform+_ : translateZ(@val);
+        -ms-transform+_ : translateZ(@val);
+            transform+_ : translateZ(@val);
+  }
+
+// translate 3d : x y & z axes
+// --------------------------
+  .translate3d(@x, @y, @z){
+    -webkit-transform+_ : translate3d(@x, @y, @z);
+       -moz-transform+_ : translate3d(@x, @y, @z);
+         -o-transform+_ : translate3d(@x, @y, @z);
+        -ms-transform+_ : translate3d(@x, @y, @z);
+            transform+_ : translate3d(@x, @y, @z);
+  }
+
+}

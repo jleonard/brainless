@@ -1,0 +1,50 @@
+// css transitions
+// http://caniuse.com/#feat=css-transitions
+// ---------------------------
+#transition{
+
+  ._(@property:all, @duration:1s, @timing:linear, @delay:0s){
+       -moz-transition+ : @property @duration @timing @delay;
+    -webkit-transition+ : @property @duration @timing @delay;
+            transition+ : @property @duration @timing @delay;
+  }
+
+// transition delay
+// https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay
+// ---------------------------
+  .delay(@num:0s){
+    -webkit-transition-delay+ : @num;
+            transition-delay+ : @num;
+  }
+
+// transition duration
+// https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration
+// ---------------------------
+  .duration(@num:0s){
+    -webkit-transition-duration+ : @num;
+            transition-duration+ : @num;
+  }
+
+// transition property (property to animate)
+// https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property
+// ---------------------------
+  .property(@val:all){
+    -webkit-transition-property+ : @val;
+            transition-property+ : @val;
+  }
+
+// transition timing function (easing)
+// https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing function
+// ---------------------------
+  .timing-function(@val:linear){
+    -webkit-transition-timing-function+ : @val;
+            transition-timing-function+ : @val;
+  }
+
+  // shorthand mixins
+  // ---------------------------
+  .easing(@val:linear){
+    .timing-function(@val);
+  }
+
+}
