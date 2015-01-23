@@ -6,20 +6,6 @@
 ## Design philosophy  
 This is not intended to be a catch-call framework for css development. Instead there are a small number of [namespaced](http://lesscss.org/features/#features-overview-feature-namespaces-and-accessors) mixin collections that provide basic conveniences.
 
-## What's Included  
-
-> The mixins are organized into 9 namespaces  
-
-* **[#animation](#animation)** : shorthands for managing keyframe animations  
-* **[#center](#center)** *_center.less* transform-based centering conveniences
-* **#container** *_container.less* easily create horizontal and vertical layout containers.
-* **#flexbox** *_flexbox.less* conveniences for flexible box model layouts
-* **[#relative #absolute #fixed & #sticky](#position)** *_position.less* positioning conveniences  
-* **[#reset](#reset)** *_reset.less* quickly set a css property back to its default value.  
-* **#transform** *_transform.less* conveniences to manage complex css transforms  
-* **[#transition](#transition)** *_transition.less* conveniences to manage css transitions  
-* **[#util](#util)** *_util.less* common css utility mixins for element sizing and clearfixing 
-
 ## Usage
 Install via [bower](http://bower.io/)
 ```bash
@@ -30,6 +16,34 @@ Import into your .less file
 ```less
 @import (less) 'bower_components/brainless/src/brainless.less'
 ```
+
+## What's Included   
+
+```bash
+src/
+├── _animation.less
+├── _center.less
+├── _container.less
+├── _flexbox.less
+├── _position.less
+├── _reset.less
+├── _transform.less
+├── _transition.less
+├── _util.less
+└── brainless.less
+``` 
+
+> The mixins are organized into 9 major groups
+
+* **[#animation](#animation)** : shorthands for managing keyframe animations  
+* **[#center](#center)** *_center.less* transform-based centering conveniences
+* **#container** *_container.less* easily create horizontal and vertical layout containers.
+* **#flexbox** *_flexbox.less* conveniences for flexible box model layouts
+* **[#relative #absolute #fixed & #sticky](#position)** *_position.less* positioning conveniences  
+* **[#reset](#reset)** *_reset.less* quickly set a css property back to its default value.  
+* **#transform** *_transform.less* conveniences to manage complex css transforms  
+* **[#transition](#transition)** *_transition.less* conveniences to manage css transitions  
+* **[#util](#util)** *_util.less* common css utility mixins for element sizing and clearfixing 
 
 ###Animation  
 
