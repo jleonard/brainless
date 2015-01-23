@@ -93,4 +93,13 @@ This is not intended to be a catch-call framework for css development. Instead t
     top: 50%; 
     left: 50%; 
   }
+
+  .box{
+    #fixed > .top(20px);
+  }
+  // css output
+  .box{
+    position: fixed;
+    top: 20px;
+  }
 ```
