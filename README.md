@@ -4,7 +4,7 @@
 > Brainless provides you with a number of grouped mixins to accelerate rapid .css development.  
 
 ## Design philosophy  
-This is not intended to be a catch-call framework for css development. Instead there are 9 [namespaced](http://lesscss.org/features/#features-overview-feature-namespaces-and-accessors) mixin collections that provide basic conveniences.
+This is not intended to be a catch-call framework for css development. Instead there are a small number of [namespaced](http://lesscss.org/features/#features-overview-feature-namespaces-and-accessors) mixin collections that provide basic conveniences.
 
 ## What's Included  
 
@@ -14,8 +14,8 @@ This is not intended to be a catch-call framework for css development. Instead t
 * **#center** __center.less_ transform-based centering conveniences
 * **#container** *_container.less* easily create horizontal and vertical layout containers.
 * **_flexbox.less** conveniences for flexible box model layouts
-* **_position.less** positioning conveniences for `postion: absolute|fixed|relative|static`  
-* **_reset.less** quickly set a css property back to its default value.  
+* **#relative #absolute #fixed & #sticky** *_position.less* positioning conveniences  
+* **#reset** *_reset.less* quickly set a css property back to its default value.  
 * **_transform.less** conveniences to manage complex css transforms  
 * **_transition.less** conveniences to manage css transitions  
 * **_util.less** common css utility mixins for element sizing and clearfixing  
@@ -102,4 +102,31 @@ This is not intended to be a catch-call framework for css development. Instead t
     position: fixed;
     top: 20px;
   }
+```  
+
+###Reset  
+**Examples**  
+```less
+// First, a position mixin
+.box{
+  #absolute > .top-left();
+}
+// Now, a reset for top and left before repositioning the element
+.box.bottom{
+  #reset > ._(top);
+  #reset > ._(left);
+  #absolute > .bottom-right();
+}
+// css output
+.box{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.box.bottom{
+  top: auto;
+  left: auto;
+  bottom: 0;
+  right: 0;
+}
 ```
