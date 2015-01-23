@@ -6,9 +6,9 @@
 ### Design philosophy  
 This is not intended to be a catch-call framework for css development. Instead there are 9 [namespaced](http://lesscss.org/features/#features-overview-feature-namespaces-and-accessors) mixin collections that provide basic conveniences.
 
-### The mixins are organized into 9 groups  
-* **_animation.less** shorthands for managing keyframe animations  
-* **_center.less** transform-based centering conveniences
+### The mixins are organized into 9 namespaces  
+* **#animation** ___animation.less__ shorthands for managing keyframe animations  
+* **#center** ___center.less__ transform-based centering conveniences
 * **_container.less** easily create horizontal and vertical layout containers.
 * **_flexbox.less** conveniences for flexible box model layouts
 * **_position.less** positioning conveniences for `postion: absolute|fixed|relative|static`  
@@ -17,9 +17,9 @@ This is not intended to be a catch-call framework for css development. Instead t
 * **_transition.less** conveniences to manage css transitions  
 * **_util.less** common css utility mixins for element sizing and clearfixing  
 
-####Animation
+####Animation  
 
-**Examples**  
+**Example**  
 ```
   @keyframes pulse {
     0% {
@@ -33,8 +33,14 @@ This is not intended to be a catch-call framework for css development. Instead t
   .box{
     #animation > .name(pulse);
     #animation > .easing(ease-in);
+    #animation > .duration(2s);
+    #animation > .delay(0.5s);
     #animation > .loop();
+    &:hover{
+      #animation > .pause();
+    }
   }
 
 ```
 
+####Center  
