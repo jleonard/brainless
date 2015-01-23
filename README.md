@@ -15,7 +15,7 @@ This is not intended to be a catch-call framework for css development. Instead t
 * **#container** *_container.less* easily create horizontal and vertical layout containers.
 * **_flexbox.less** conveniences for flexible box model layouts
 * **[#relative #absolute #fixed & #sticky](#position)** *_position.less* positioning conveniences  
-* **#reset** *_reset.less* quickly set a css property back to its default value.  
+* **[#reset](#reset)** *_reset.less* quickly set a css property back to its default value.  
 * **_transform.less** conveniences to manage complex css transforms  
 * **_transition.less** conveniences to manage css transitions  
 * **[#util](#util)** *_util.less* common css utility mixins for element sizing and clearfixing  
