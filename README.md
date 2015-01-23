@@ -23,7 +23,7 @@ This is not intended to be a catch-call framework for css development. Instead t
 ###Animation  
 
 **Examples**  
-```
+```less
   @keyframes pulse {
     0% {
       opacity: 1;
