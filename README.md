@@ -10,11 +10,11 @@ This is not intended to be a catch-call framework for css development. Instead t
 
 > The mixins are organized into 9 namespaces  
 
-* **#animation** : shorthands for managing keyframe animations  
-* **#center** __center.less_ transform-based centering conveniences
+* **[#animation](#animation)** : shorthands for managing keyframe animations  
+* **[#center](#center)** *_center.less* transform-based centering conveniences
 * **#container** *_container.less* easily create horizontal and vertical layout containers.
 * **_flexbox.less** conveniences for flexible box model layouts
-* **#relative #absolute #fixed & #sticky** *_position.less* positioning conveniences  
+* **[#relative #absolute #fixed & #sticky](#position)** *_position.less* positioning conveniences  
 * **#reset** *_reset.less* quickly set a css property back to its default value.  
 * **_transform.less** conveniences to manage complex css transforms  
 * **_transition.less** conveniences to manage css transitions  
