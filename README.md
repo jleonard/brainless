@@ -3,12 +3,15 @@
 
 > Brainless provides you with a number of grouped mixins to accelerate rapid .css development.  
 
-### Design philosophy  
+## Design philosophy  
 This is not intended to be a catch-call framework for css development. Instead there are 9 [namespaced](http://lesscss.org/features/#features-overview-feature-namespaces-and-accessors) mixin collections that provide basic conveniences.
 
-### The mixins are organized into 9 namespaces  
-* **#animation** ___animation.less__ shorthands for managing keyframe animations  
-* **#center** ___center.less__ transform-based centering conveniences
+## What's Included  
+
+> The mixins are organized into 9 namespaces  
+
+* **#animation** : shorthands for managing keyframe animations  
+* **#center** __center.less_ transform-based centering conveniences
 * **_container.less** easily create horizontal and vertical layout containers.
 * **_flexbox.less** conveniences for flexible box model layouts
 * **_position.less** positioning conveniences for `postion: absolute|fixed|relative|static`  
@@ -17,9 +20,9 @@ This is not intended to be a catch-call framework for css development. Instead t
 * **_transition.less** conveniences to manage css transitions  
 * **_util.less** common css utility mixins for element sizing and clearfixing  
 
-####Animation  
+###Animation  
 
-**Example**  
+**Examples**  
 ```
   @keyframes pulse {
     0% {
@@ -43,4 +46,26 @@ This is not intended to be a catch-call framework for css development. Instead t
 
 ```
 
-####Center  
+###Center  
+
+**Examples**  
+```
+  .box-x{
+    #center > .x();
+  }
+
+  .box-y{
+    #center > .y();
+  }
+
+  .box-xy{
+    #center > .xy();
+  }
+
+  // elements are positioned absolute by default
+  // optionally, pass in a position attribute
+  .box-fixed{
+    #center > .xy(fixed);
+  }
+
+```
