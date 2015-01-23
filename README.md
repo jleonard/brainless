@@ -12,7 +12,7 @@ This is not intended to be a catch-call framework for css development. Instead t
 
 * **#animation** : shorthands for managing keyframe animations  
 * **#center** __center.less_ transform-based centering conveniences
-* **_container.less** easily create horizontal and vertical layout containers.
+* **#container** *_container.less* easily create horizontal and vertical layout containers.
 * **_flexbox.less** conveniences for flexible box model layouts
 * **_position.less** positioning conveniences for `postion: absolute|fixed|relative|static`  
 * **_reset.less** quickly set a css property back to its default value.  
@@ -49,7 +49,7 @@ This is not intended to be a catch-call framework for css development. Instead t
 ###Center  
 
 **Examples**  
-```
+```less
   .box-x{
     #center > .x();
   }
@@ -68,4 +68,29 @@ This is not intended to be a catch-call framework for css development. Instead t
     #center > .xy(fixed);
   }
 
+```
+
+###Position  
+**Examples** 
+```less
+
+  .box{
+    #absolute > .top-left();
+  }
+  // css output
+  .box{ 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+  }
+
+  .box{
+    #absolute > .top-left(50%,50%);
+  }
+  // css output
+  .box{ 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+  }
 ```
