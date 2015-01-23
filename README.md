@@ -17,7 +17,7 @@ This is not intended to be a catch-call framework for css development. Instead t
 * **[#relative #absolute #fixed & #sticky](#position)** *_position.less* positioning conveniences  
 * **[#reset](#reset)** *_reset.less* quickly set a css property back to its default value.  
 * **_transform.less** conveniences to manage complex css transforms  
-* **_transition.less** conveniences to manage css transitions  
+* **[#transition](#transition)** *_transition.less* conveniences to manage css transitions  
 * **[#util](#util)** *_util.less* common css utility mixins for element sizing and clearfixing  
 
 ###Animation  
@@ -134,6 +134,38 @@ This is not intended to be a catch-call framework for css development. Instead t
   right: 0;
 }
 ```  
+
+###Transition
+**Examples**
+```less
+// basic example
+.box{
+  #transition > .property(opacity);
+  #transtion > .duration(1s);
+  #transtion > .delay(0.5s);
+}
+
+// supports multiple properties
+.multiples{
+  #transition > .property(opacity);
+  #transtion > .duration(2s);
+  #transtion > .delay(5s);
+
+  #transition > .property(background-color);
+  #transtion > .duration(1s);
+  #transtion > .delay(0.5s);
+}
+
+// css output
+.multiples{
+  -webkit-transition-property: opacity, background-color;
+  transition-property: opacity, background-color;
+  -webkit-transition-delay: 2s, 1s;
+  transition-delay: 2s, 1s;
+  -webkit-transition-duration: 5s, 0.5s;
+  transition-duration: 5s, 0.5s;
+}
+```
 
 ###Util  
 **Examples**  
