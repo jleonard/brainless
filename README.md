@@ -18,7 +18,7 @@ This is not intended to be a catch-call framework for css development. Instead t
 * **#reset** *_reset.less* quickly set a css property back to its default value.  
 * **_transform.less** conveniences to manage complex css transforms  
 * **_transition.less** conveniences to manage css transitions  
-* **[#util](util)** *_util.less* common css utility mixins for element sizing and clearfixing  
+* **[#util](#util)** *_util.less* common css utility mixins for element sizing and clearfixing  
 
 ###Animation  
 
