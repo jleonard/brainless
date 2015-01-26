@@ -1,0 +1,86 @@
+<h3>Basic transtion</h3>
+
+<div class='grid example'>
+
+  <div class='column-6'>
+    <div class='box center transition'></div>
+  </div>
+
+  <div class='column-6'>
+<pre class='language-css'><code>.box {
+  #transition > .property(opacity);
+  #transition > .duration(2s);
+  #transition > .delay(0.5s);
+  opacity: 1;
+  &:hover{
+    opacity: 0.4;
+  }
+}
+
+.box {
+  opacity: 1;
+
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 2s
+  transition-duration: 2s
+  -webkit-transition-delay: .5s;
+  transition-delay: .5s;
+}
+.box:hover{
+  opacity: 0.4;
+}
+</code></pre>
+  </div>
+</div>
+
+
+<h3>Transitioning multiple properties</h3>
+<p>Managing two property transitions with different delay and duration values.</p>
+
+<div class='grid example'>
+
+  <div class='column-6'>
+    <div class='box center transition complex'></div>
+  </div>
+
+  <div class='column-6'>
+<pre class='language-css'><code>.box {
+  opacity: 1;
+  #transition > .property(opacity);
+  #transition > .duration(2s);
+  #transition > .delay(0.5s);
+
+  background-color: #f012be;
+  #transition > .property(background-color);
+  #transition > .duration(0.75s);
+  #transition > .delay(1s);
+  
+  &amp;:hover{
+    opacity: 0.4;
+    background-color: #7fdbff;
+  }
+}
+
+// css output
+.box {
+  opacity: 1;
+  background-color: #f012be;
+
+  -webkit-transition-property: opacity,background-color;
+  transition-property: opacity,background-color;
+  -webkit-transition-duration: 2s,.75s;
+  transition-duration: 2s,.75s;
+  -webkit-transition-delay: .5s,1s;
+  transition-delay: .5s,1s;
+}
+.box:hover{
+  opacity: 0.4;
+  background-color: #7fdbff;
+}
+</code></pre>
+  </div>
+</div>
+
+
+

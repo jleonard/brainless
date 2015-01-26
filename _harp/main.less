@@ -1,0 +1,280 @@
+@import (less) '../src/brainless.less';
+
+@import (less) '_includes/prism.css';
+
+@import (less) '_includes/browser-logos.less';
+
+// variables: breakpoints
+// (required by grid.less)
+// inspired by: http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/
+// ---------------------------
+@phone         : 30em;  // ≈ 480px
+@tablet        : 59em;  // ≈ 944px
+@desktop       : 64em;  // ≈ 1024px
+@wideDesktop   : 100em; // ≈ 1600px
+
+// variables : colors non-semantic
+// ---------------------------
+@NAVY        : #001f3f;
+@BLUE        : #0074d9;
+@AQUA        : #7fdbff; 
+@TEAL        : #39cccc; 
+@OLIVE       : #3d9970; 
+@GREEN       : #2ecc40;
+@LIME        : #01ff70;
+@YELLOW      : #ffdc00;
+@ORANGE      : #ff851b;
+@RED         : #ff4136;
+@MAROON      : #85144b;
+@FUCHSIA     : #f012be;
+@PURPLE      : #b10dc9;
+@BLACK       : #111;
+@GRAY        : #aaa;
+@SLATE       : #303030;
+@SILVER      : #ddd;
+@SMOKE       : #f5f5f5;
+@WHITE       : #fff;
+@PAPER       : #fcfaf2;
+@NEWSPRINT   : #f5f2f0;
+@PEE         : #F4FD72;         
+
+// variables : colors semantic
+// ---------------------------
+@highlight   : @PEE;
+@disabled    : @GRAY;
+@bodyColor   : @WHITE;
+@textColor   : @SLATE;
+@linkColor   : @BLUE;
+@bad         : @RED;
+@good        : @GREEN;
+@warning     : @ORANGE;
+
+// variables   : measurements
+// ---------------------------
+@baseUnit      : 1rem;      // base unit of measurement ≈ 16px
+@radius        : 2px;       // generic border radius. set to 0 to nullify.
+@columns       : 12;        // grid columns
+@gutter        : @baseUnit; // grid gutter
+
+// variables   : typography
+// ---------------------------
+@sans          : 'Lato', sans serif;
+@serif         : 'Georgia', serif;
+@lineHeight    : 1.5rem;
+@fontSize      : @baseUnit;
+
+// variables   : z-index
+// ---------------------------
+@zContent      : 1;
+@zUI           : 2;
+@zSystem       : 500;
+@zMeta         : 999999;
+
+// basic scaffolding & reset
+// ---------------------------
+*,*:before,*:after{
+  box-sizing: border-box;
+}
+
+html{
+  -ms-text-size-adjust     : 100%;
+  -webkit-text-size-adjust : 100%;
+}
+
+a,a:visited{
+  text-decoration: none;
+  &.button{
+    color: @SLATE;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: @SMOKE;
+    border: 1px solid @SILVER;
+    font-weight: bold;
+  }
+}
+
+body{
+  font-family: @sans;
+  color                  : @textColor;
+  font-size              : @fontSize;
+  line-height            : @lineHeight;
+  margin                 : 0;
+  text-rendering         : optimizeLegibility;
+  -webkit-font-smoothing : antialiased;
+}
+
+main{
+  
+}
+
+#bg{
+  ._(@start,@stop){
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0, @start),
+      color-stop(1, @stop)
+    );
+    background-image: -o-linear-gradient(bottom, @start 0%, @stop 100%);
+    background-image: -moz-linear-gradient(bottom, @start 0%, @stop 100%);
+    background-image: -webkit-linear-gradient(bottom, @start 0%, @stop 100%);
+    background-image: -ms-linear-gradient(bottom, @start 0%, @stop 100%);
+    background-image: linear-gradient(to bottom, @start 0%, @stop 100%);
+  }
+}
+
+// section
+// ------------------------------
+section{
+  padding: 3rem 0;
+  position: relative;
+  > div{
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+// section : major variation
+// ------------------------------
+section.major{
+  border-top: 3px solid @AQUA;
+  #bg > ._(@NEWSPRINT,white);
+
+  color: @AQUA;
+  height: 75vh;
+  padding: 1rem 0;
+
+  > div{
+    #center > .xy();
+  }
+  h1{
+    font-weight: 900;
+  }
+  h2{
+    font-weight: 300;
+    margin-bottom: 3rem;
+    color: @SLATE;
+  }
+}
+
+footer{
+  background-color: @SLATE;
+  color: @AQUA;
+  text-align: center;
+  padding: 3rem;
+  a{
+    color: @AQUA;
+    font-weight: 900;
+  }
+}
+
+// typography
+// ------------------------------
+h1{
+  font-size: 4rem;
+  font-weight: 300;
+  span{
+    color:@SLATE;
+  }
+}
+
+h2{
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+// grid
+// ------------------------------
+.grid{
+  #container > .hBox(0);
+  .column-6{
+    position: relative;
+    width: 50%;
+  }
+}
+
+// grid example variation
+// ------------------------------
+.grid.example{
+  background-color: @NEWSPRINT;
+}
+
+// box
+// ------------------------------
+.box{
+  background-color: @AQUA;
+  #util > .square();
+  &.center{
+    #center > .xy();
+  }
+}
+
+// box center xy
+// ------------------------------
+.box{
+  #util > .square();
+  &.center-y{
+    #center > .y();
+  }
+}
+
+// box position
+// ------------------------------
+.box.position{
+  &.top-left{
+    #absolute > .top-left(20px,50px);
+  }
+  &.bottom-right{
+    #absolute > .bottom-right(20px,50px);
+  }
+}
+
+// box transform
+// ------------------------------
+.box.transform{
+  #transform > .translateX(-50%);
+  #transform > .translateY(-50%);
+  #transform > .scaleX(0.8);
+  #transform > .rotateZ(20deg);
+  #transform > .rotateY(40deg);
+}
+
+// box transition
+// ------------------------------
+.box.transition{
+  #transition > .property(opacity);
+  #transition > .duration(2s);
+  #transition > .delay(0.5s);
+  opacity: 1;
+  &:hover{
+    opacity: 0.4;
+  }
+}
+
+.box.transition.complex{
+  top: 20%;
+  
+  opacity: 1;
+  #transition > .property(opacity);
+  #transition > .duration(2s);
+  #transition > .delay(0.5s);
+
+  background-color: #7fdbff;
+  #transition > .property(background-color);
+  #transition > .duration(0.75s);
+  #transition > .delay(1s);
+  
+  &:hover{
+    opacity: 0.4;
+    background-color: #303030;
+  }
+}
+
+// box util
+// ------------------------------
+.box.util{
+  &.size{
+    #util > .size(300px,150px);
+  }
+}

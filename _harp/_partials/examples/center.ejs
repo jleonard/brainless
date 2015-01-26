@@ -1,0 +1,53 @@
+<h3>Center on the x &amp; y axes.</h3>
+<p>No need to determine the height of the element or the container. Uses css transform &amp; position.
+
+<div class='grid example'>
+
+  <div class='column-6'>
+    <div class='box center'></div>
+  </div>
+
+  <div class='column-6'>
+<pre class='language-css'><code>.box {
+  #center > .xy();
+}
+
+// css output
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+</code></pre>
+  </div>
+</div>
+
+
+<h3>Center on a specific axis (y only).</h3>
+
+<div class='grid example'>
+
+  <div class='column-6'>
+    <div class='box center-y'></div>
+  </div>
+
+  <div class='column-6'>
+<pre class='language-css'><code>.box {
+  #center > .y();
+}
+
+// css output
+.box {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+</code></pre>
+  </div>
+</div>
+

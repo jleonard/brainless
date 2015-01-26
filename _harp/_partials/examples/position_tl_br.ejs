@@ -1,0 +1,23 @@
+<h3>Conveniences for one line positioning</h3>
+
+<p>There are conveniences for <em>absolute</em>, <em>relative</em>, <em>fixed</em> and even the barely supported <em>sticky</em> position values. <a href='https://github.com/jleonard/brainless/blob/master/src/_position.less' target='_blank'>View the source</a> for all the mixins available.</p>
+
+<div class='grid example'>
+
+  <div class='column-6'>
+    <div class='box position top-left'></div>
+    <div class='box position bottom-right'></div>
+  </div>
+
+  <div class='column-6'>
+<pre class='language-css'><code>.box1{
+  #absolute > .top-left(20px,50px);
+}
+
+.box2{
+  #absolute > .bottom-right(20px,50px);
+}
+</code></pre>
+  </div>
+</div>
+

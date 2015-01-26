@@ -1,0 +1,27 @@
+<h3>An easier way to spell out complex transformations.</h3>
+
+<div class='grid example'>
+
+  <div class='column-6'>
+    <div class='box center transform'></div>
+  </div>
+
+  <div class='column-6'>
+<pre class='language-css'><code>.box {
+  #transform > .translateX(-50%);
+  #transform > .translateY(-50%);
+  #transform > .scaleX(0.8);
+  #transform > .rotateZ(20deg);
+  #transform > .rotateY(40deg);
+}
+
+// css output
+.box {
+  -webkit-transform: translateX(-50%) translateY(-50%) scaleX(.8) rotateZ(20deg) rotateY(40deg);
+  -ms-transform: translateX(-50%) translateY(-50%) scaleX(.8) rotateZ(20deg) rotateY(40deg);
+  transform: translateX(-50%) translateY(-50%) scaleX(.8) rotateZ(20deg) rotateY(40deg);
+}
+</code></pre>
+  </div>
+</div>
+

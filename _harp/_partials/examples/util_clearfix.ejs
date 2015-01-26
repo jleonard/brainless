@@ -1,0 +1,16 @@
+<h3>clearfix</h3>
+<p>The classic <a href='http://css-tricks.com/snippets/css/clear-fix/' target='_blank'>clearfix</a></p>
+<pre class='language-css'><code>.box{
+  #util > .clearfix();
+}
+
+// css output
+.box:before,.box:after{
+  content: " ";
+  display: table;
+}
+
+.box:after{
+  clear: both;
+}
+</code></pre>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>brainless</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="main.css">
+
+    </head>
+    <body>
+
+      <main>
+        <section class='major'>
+  <div>
+    <h1><span>brain</span>.less</h1>
+    <h2>A collection of less mixins to simplify css development.</h2>
+    <a class='button' href='https://github.com/jleonard/brainless' target='_blank'>view on github</a>
+  </div>
+</section>
+
+<section class='position'>
+  <div>
+    <h2>Centering &amp; positioning elements</h2>
+    <p></p>
+
+    <h3>Center on the x &amp; y axes.</h3>
+<p>No need to determine the height of the element or the container. Uses css transform &amp; position.
+
+<div class='grid example'>
+
+  <div class='column-6'>
+    <div class='box center'></div>
+  </div>
+
+  <div class='column-6'>
+<pre class='language-css'><code>.box {
+  #center > .xy();
+}
+
+// css output
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+</code></pre>
+  </div>
+</div>
+
+
+<h3>Center on a specific axis (y only).</h3>
+
+<div class='grid example'>
+
+  <div class='column-6'>
+    <div class='box center-y'></div>
+  </div>
+
+  <div class='column-6'>
+<pre class='language-css'><code>.box {
+  #center > .y();
+}
+
+// css output
+.box {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+</code></pre>
+  </div>
+</div>
+
+
+
+  </div>
+
+</section>
+
+<section class='position'>
+  <div>
+    <h2>Positioning</h2>
+    <p></p>
+
+    <h3>Conveniences for one line positioning</h3>
+
+<p>There are conveniences for <em>absolute</em>, <em>relative</em>, <em>fixed</em> and even the barely supported <em>sticky</em> position values. <a href='https://github.com/jleonard/brainless/blob/master/src/_position.less' target='_blank'>View the source</a> for all the mixins available.</p>
+
+<div class='grid example'>
+
+  <div class='column-6'>
+    <div class='box position top-left'></div>
+    <div class='box position bottom-right'></div>
+  </div>
+
+  <div class='column-6'>
+<pre class='language-css'><code>.box1{
+  #absolute > .top-left(20px,50px);
+}
+
+.box2{
+  #absolute > .bottom-right(20px,50px);
+}
+</code></pre>
+  </div>
+</div>
+
+
+
+  </div>
+
+</section>
+
+<section class='position'>
+  <div>
+    <h2>Transforms</h2>
+    <p></p>
+
+    <h3>An easier way to spell out complex transformations.</h3>
+
+<div class='grid example'>
+
+  <div class='column-6'>
+    <div class='box center transform'></div>
+  </div>
+
+  <div class='column-6'>
+<pre class='language-css'><code>.box {
+  #transform > .translateX(-50%);
+  #transform > .translateY(-50%);
+  #transform > .scaleX(0.8);
+  #transform > .rotateZ(20deg);
+  #transform > .rotateY(40deg);
+}
+
+// css output
+.box {
+  -webkit-transform: translateX(-50%) translateY(-50%) scaleX(.8) rotateZ(20deg) rotateY(40deg);
+  -ms-transform: translateX(-50%) translateY(-50%) scaleX(.8) rotateZ(20deg) rotateY(40deg);
+  transform: translateX(-50%) translateY(-50%) scaleX(.8) rotateZ(20deg) rotateY(40deg);
+}
+</code></pre>
+  </div>
+</div>
+
+
+
+  </div>
+
+</section>
+
+<section class='position'>
+  <div>
+    <h2>Transitions</h2>
+    <p></p>
+
+    <h3>Basic transtion</h3>
+
+<div class='grid example'>
+
+  <div class='column-6'>
+    <div class='box center transition'></div>
+  </div>
+
+  <div class='column-6'>
+<pre class='language-css'><code>.box {
+  #transition > .property(opacity);
+  #transition > .duration(2s);
+  #transition > .delay(0.5s);
+  opacity: 1;
+  &:hover{
+    opacity: 0.4;
+  }
+}
+
+.box {
+  opacity: 1;
+
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 2s
+  transition-duration: 2s
+  -webkit-transition-delay: .5s;
+  transition-delay: .5s;
+}
+.box:hover{
+  opacity: 0.4;
+}
+</code></pre>
+  </div>
+</div>
+
+
+<h3>Transitioning multiple properties</h3>
+<p>Managing two property transitions with different delay and duration values.</p>
+
+<div class='grid example'>
+
+  <div class='column-6'>
+    <div class='box center transition complex'></div>
+  </div>
+
+  <div class='column-6'>
+<pre class='language-css'><code>.box {
+  opacity: 1;
+  #transition > .property(opacity);
+  #transition > .duration(2s);
+  #transition > .delay(0.5s);
+
+  background-color: #f012be;
+  #transition > .property(background-color);
+  #transition > .duration(0.75s);
+  #transition > .delay(1s);
+  
+  &amp;:hover{
+    opacity: 0.4;
+    background-color: #7fdbff;
+  }
+}
+
+// css output
+.box {
+  opacity: 1;
+  background-color: #f012be;
+
+  -webkit-transition-property: opacity,background-color;
+  transition-property: opacity,background-color;
+  -webkit-transition-duration: 2s,.75s;
+  transition-duration: 2s,.75s;
+  -webkit-transition-delay: .5s,1s;
+  transition-delay: .5s,1s;
+}
+.box:hover{
+  opacity: 0.4;
+  background-color: #7fdbff;
+}
+</code></pre>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+
+</section>
+
+<section class='util'>
+  <div>
+    <h2>Util</h2>
+    <p>Misc. helpers</p>
+
+    <h3>size</h3>
+<p>define width and height in a single line</p>
+
+<div class='grid example'>
+
+  <div class='column-6'>
+    <div class='box center util size'></div>
+  </div>
+
+  <div class='column-6'>
+<pre class='language-css'><code>.box{
+  #util > .size(300px,150px);
+}
+
+// css output
+.box{
+  width: 300px;
+  height: 150px;  
+}</code></pre>
+  </div>
+</div>
+
+
+    <h3>square</h3>
+<div class='grid example'>
+
+  <div class='column-6'>
+    <div class='box center util'></div>
+  </div>
+
+  <div class='column-6'>
+<pre class='language-css'><code>.box{
+  #util > .square(100px);
+}
+
+// css output
+.box{
+  width: 100px;
+  height: 100px;  
+}</code></pre>
+  </div>
+</div>
+
+    <h3>clearfix</h3>
+<p>The classic <a href='http://css-tricks.com/snippets/css/clear-fix/' target='_blank'>clearfix</a></p>
+<pre class='language-css'><code>.box{
+  #util > .clearfix();
+}
+
+// css output
+.box:before,.box:after{
+  content: " ";
+  display: table;
+}
+
+.box:after{
+  clear: both;
+}
+</code></pre>
+  </div>
+
+</section>
+
+<footer>
+  <a href='https://github.com/jleonard/brainless' target='_blank'>Find this on github</a> or <a href='https://twitter.com/j__leonard' target='_blank'>follow me on twitter</a>.
+</footer>
+      </main>
+
+      <script title="jQuery from the CDN" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script title="" src="js/prism.js"></script>
+      <script type="text/javascript" src="js/code.snippets.js"></script>
+      <script title="Sidebar nav" src="js/navigation.js"></script>
+
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-37507961-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+
+  </body>
+</html>
